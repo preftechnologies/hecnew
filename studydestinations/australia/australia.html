@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study in Australia</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+     <!-- Link the theme CSS -->
+     <link rel="stylesheet" href="/hecnew/css/theme.css">
+    
+
+
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: silver;
+            color: #333;
+        }
+        .hero {
+    position: relative;
+    background: url('/hecnew/images/australia-banner.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 80%;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: auto;
+}
+
+.general-info {
+    background: lightblue;
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.general-info h2 {
+    font-size: 2.2em;
+    color: #2B6CB0;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #38B2AC;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.general-info p {
+    font-size: 1.2em;
+    color: #444;
+    max-width: 900px;
+    margin: 10px auto 20px;
+}
+
+.general-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.general-info ul li {
+    margin: 10px 0;
+    font-weight: 500;
+    color: #333;
+}
+.top-universities {
+    background: lightblue;
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.top-universities h2 {
+    font-size: 2.2em;
+    color: #2B6CB0;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #38B2AC;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.top-universities p {
+    font-size: 1.2em;
+    color: #444;
+    max-width: 900px;
+    margin: 10px auto 20px;
+}
+
+.universities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.university {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.university img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.university h3 {
+    font-size: 1.5em;
+    color: #2B6CB0;
+    margin-top: 10px;
+}
+
+.university p {
+    font-size: 1em;
+    color: #555;
+    margin-top: 5px;
+}
+
+.scholarships {
+    background: lightblue;
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.scholarships h2 {
+    font-size: 2.2em;
+    color: #2B6CB0;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #38B2AC;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.scholarships p {
+    font-size: 1.2em;
+    color: #444;
+    max-width: 900px;
+    margin: 10px auto 20px;
+}
+
+.scholarship-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.scholarship {
+    background-color: #f5f5f5;
+;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.scholarship h3 {
+    font-size: 1.5em;
+    color: #2B6CB0;
+    margin-bottom: 10px;
+}
+
+.scholarship p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 1em;
+    color: white;
+    background: #2B6CB0;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #38B2AC;
+}
+
+.necessary-info {
+    background: lightblue;
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.necessary-info h2 {
+    font-size: 2.2em;
+    color: #2B6CB0;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #38B2AC;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.necessary-info p {
+    font-size: 1.2em;
+    color: #444;
+    max-width: 900px;
+    margin: 10px auto 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.info-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.info-item h3 {
+    font-size: 1.5em;
+    color: #2B6CB0;
+    margin-bottom: 10px;
+}
+
+.info-item p, .info-item ul {
+    font-size: 1.1em;
+    color: #555;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.info-item ul {
+    list-style: none;
+}
+
+.info-item ul li {
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 1em;
+    color: white;
+    background: #2B6CB0;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #38B2AC;
+}
+
+.courses-fees {
+    background: skyblue;
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.courses-fees h2 {
+    font-size: 2.2em;
+    color: #2B6CB0;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #38B2AC;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.courses-fees p {
+    font-size: 1.2em;
+    color: #444;
+    max-width: 900px;
+    margin: 10px auto 20px;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+}
+
+th {
+    background: #2B6CB0;
+    color: white;
+    font-size: 1.2em;
+}
+
+td {
+    font-size: 1.1em;
+    color: #555;
+    background: #f9f9f9;
+}
+
+
+    </style>
+    <body>
+
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Study in Australia</h1>
+                <p>Discover world-class universities, cutting-edge research, and a vibrant student life in Australia.</p>
+                
+            </div>
+        </div>
+        
+        <div class="section general-info" id="general-info">
+            <div class="content">
+                <h2>Why Study in Australia?</h2>
+                <p>Australia is home to world-class universities, a high quality of life, and a multicultural environment. It offers globally recognized degrees and numerous opportunities for research, innovation, and career growth.</p>
+                <ul>
+                    <li>🏆 **Top-ranked universities** with high academic standards</li>
+                    <li>🌏 **Diverse international student community**</li>
+                    <li>💼 **Post-study work opportunities**</li>
+                    <li>📚 **Wide range of courses and specializations**</li>
+                    <li>🎓 **Scholarship programs for international students**</li>
+                </ul>
+               
+            </div>
+        </div>
+        
+        <div class="section top-universities" id="top-universities">
+            <h2>Top Universities in Australia</h2>
+            <p>Australia is home to some of the world's most prestigious universities, known for high academic standards, cutting-edge research, and international recognition.</p>
+        
+            <div class="universities-grid">
+                <div class="university">
+                    <img src="/hecnew/images/melbourne-university.jpg" alt="University of Melbourne">
+                    <h3>University of Melbourne</h3>
+                    <p>Ranked among the top universities globally, offering diverse programs and research opportunities.</p>
+                </div>
+        
+                <div class="university">
+                    <img src="/hecnew/images/australian-national-university.jpeg" alt="Australian National University">
+                    <h3>Australian National University (ANU)</h3>
+                    <p>One of Australia's leading research institutions, known for excellence in teaching and global impact.</p>
+                </div>
+        
+                <div class="university">
+                    <img src="/hecnew/images/sydney-university.jpg" alt="University of Sydney">
+                    <h3>University of Sydney</h3>
+                    <p>Australia’s oldest university, offering a wide range of courses with a strong international student base.</p>
+                </div>
+        
+                <div class="university">
+                    <img src="/hecnew/images/unsw-university.jpg" alt="University of New South Wales">
+                    <h3>University of New South Wales (UNSW)</h3>
+                    <p>A globally recognized university for business, engineering, and technology programs.</p>
+                </div>
+        
+                <div class="university">
+                    <img src="/hecnew/images/uq-university.jpg" alt="University of Queensland">
+                    <h3>University of Queensland (UQ)</h3>
+                    <p>Renowned for strong research output and innovation across various disciplines.</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="section scholarships" id="scholarships">
+            <h2>Scholarships for International Students</h2>
+            <p>Australia offers a variety of scholarships to help international students finance their studies. These scholarships are funded by the government, universities, and private organizations.</p>
+        
+            <div class="scholarship-list">
+                <div class="scholarship">
+                    <h3>🎓 Australia Awards Scholarships</h3>
+                    <p>Fully funded government scholarships for international students covering tuition fees, travel, and living expenses.</p>
+                    <a href="https://www.dfat.gov.au/people-to-people/australia-awards" target="_blank" class="btn">Learn More</a>
+                </div>
+        
+                <div class="scholarship">
+                    <h3>💰 Destination Australia Program</h3>
+                    <p>Provides financial support for students studying in regional Australian institutions.</p>
+                    <a href="https://www.studyinaustralia.gov.au/english/australian-education/scholarships/destination-australia" target="_blank" class="btn">Learn More</a>
+                </div>
+        
+                <div class="scholarship">
+                    <h3>🏛️ University-Specific Scholarships</h3>
+                    <p>Many Australian universities offer scholarships based on academic performance, leadership, and financial need.</p>
+                    <a href="https://www.studyinaustralia.gov.au/english/australian-education/scholarships" target="_blank" class="btn">Explore Universities</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section necessary-info" id="necessary-info">
+            <h2>Necessary Information for Studying in Australia</h2>
+            <p>Before applying to universities in Australia, international students must meet specific requirements, including obtaining a student visa and proving financial and language proficiency.</p>
+        
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>📜 Student Visa (Subclass 500)</h3>
+                    <p>International students must apply for a **Student Visa (Subclass 500)** to study in Australia. The visa allows students to work part-time and stay for the duration of their course.</p>
+                    <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500" target="_blank" class="btn">Visa Details</a>
+                </div>
+        
+                <div class="info-item">
+                    <h3>📚 English Proficiency</h3>
+                    <p>Students must demonstrate English proficiency through recognized tests such as:</p>
+                    <ul>
+                        <li>IELTS (Minimum Score: 6.0 - 7.0)</li>
+                        <li>TOEFL (Minimum Score: 80 - 100)</li>
+                        <li>PTE Academic (Minimum Score: 50 - 65)</li>
+                    </ul>
+                </div>
+        
+                <div class="info-item">
+                    <h3>💰 Financial Requirements</h3>
+                    <p>Applicants must show proof of sufficient funds to cover tuition fees, living costs, and return airfare. Estimated costs:</p>
+                    <ul>
+                        <li>Tuition Fees: AUD 20,000 - 45,000 per year</li>
+                        <li>Living Costs: AUD 21,000 per year</li>
+                    </ul>
+                </div>
+        
+                <div class="info-item">
+                    <h3>🏥 Health Insurance</h3>
+                    <p>All international students must have **Overseas Student Health Cover (OSHC)** for the entire duration of their stay.</p>
+                    <a href="https://www.privatehealth.gov.au" target="_blank" class="btn">Health Insurance Info</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section courses-fees" id="courses-fees">
+            <h2>Popular Courses & Tuition Fees</h2>
+            <p>Australia offers a diverse range of study programs across various disciplines. Below are some of the most sought-after courses along with their estimated annual tuition fees.</p>
+        
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <th>Average Annual Tuition Fee (AUD)</th>
+                </tr>
+                <tr>
+                    <td>Business & Management</td>
+                    <td>$20,000 - $45,000</td>
+                </tr>
+                <tr>
+                    <td>Engineering</td>
+                    <td>$25,000 - $50,000</td>
+                </tr>
+                <tr>
+                    <td>Medicine</td>
+                    <td>$30,000 - $75,000</td>
+                </tr>
+                <tr>
+                    <td>Computer Science & IT</td>
+                    <td>$20,000 - $40,000</td>
+                </tr>
+                <tr>
+                    <td>Law</td>
+                    <td>$25,000 - $55,000</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div id="header-container"></div> <!-- Header will be injected here -->
+        <div id="footer-container"></div>
+
+<script src="/hecnew/js/header.js"></script>
+<script src="/hecnew/js/footer.js"></script>
+
+
+    </body>
+    </html>

@@ -1,0 +1,105 @@
+/* Study Destinations Page - Professional and Synchronized Styling */
+
+/* Whole page background aligned with theme.css */
+body {
+    background-color: #0D1B2A;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove spacing between header and first container */
+.header-space {
+    margin-top: 0 !important;
+}
+
+/* Header section (smaller and optimized) */
+.py-5.bg-dark {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    background-color: #183453 !important; /* matches header.js navbar color */
+}
+
+.py-5.bg-dark h1 {
+    font-size: 2.2rem !important; /* smaller header text */
+    padding-top: 40px !important;
+}
+
+.py-5.bg-dark p {
+    font-size: 1.1rem !important;
+}
+
+/* Container styling - synchronized with header/footer */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Country blocks - Professional & synchronized styling */
+.country-link {
+    text-decoration: none;
+}
+
+.country-block {
+    background-size: cover;
+    background-position: center;
+    height: 180px; /* professional height */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.country-block h3 {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0;
+    transition: background 0.3s ease;
+}
+
+.country-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.country-block:hover h3 {
+    background: rgba(56, 178, 172, 0.8); /* matches secondary color #38B2AC */
+}
+
+/* Ensure consistency and professionalism */
+.row {
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .py-5.bg-dark h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .country-block {
+        height: 150px;
+    }
+
+    .country-block h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .country-block {
+        height: 130px;
+    }
+
+    .country-block h3 {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study in the UK</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/hecnew/css/theme.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: silver;
+            color: #333;
+        }
+        .hero {
+            position: relative;
+            background: url('/hecnew/images/uk-banner.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 80%;
+        }
+        .hero h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.3em;
+            max-width: 700px;
+            margin: auto;
+        }
+        .section {
+            background: lightblue;
+            padding: 50px 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.2em;
+            color: #2B6CB0;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #38B2AC;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Study in the UK</h1>
+            <p>The UK offers world-renowned universities, rich cultural diversity, and strong career opportunities for international students.</p>
+        </div>
+    </div>
+
+    <!-- General Information -->
+    <div class="section" id="general-info">
+        <h2>Why Study in the UK?</h2>
+        <p>The UK is home to globally ranked universities, a diverse student population, and exceptional career prospects.</p>
+    </div>
+
+    <!-- Top Universities -->
+    <div class="section" id="top-universities">
+        <h2>Top Universities in the UK</h2>
+        <ul>
+            <li>🏫 University of Oxford</li>
+            <li>🎓 University of Cambridge</li>
+            <li>🏛️ Imperial College London</li>
+            <li>📚 University College London (UCL)</li>
+            <li>📖 London School of Economics and Political Science (LSE)</li>
+        </ul>
+    </div>
+
+    <!-- Scholarships -->
+    <div class="section" id="scholarships">
+        <h2>Scholarships for International Students</h2>
+        <ul>
+            <li>🎓 Chevening Scholarships</li>
+            <li>💰 Commonwealth Scholarships</li>
+            <li>🏛️ British Council GREAT Scholarships</li>
+        </ul>
+    </div>
+
+    <!-- Visa & Study Requirements -->
+    <div class="section" id="visa-requirements">
+        <h2>Visa & Study Requirements</h2>
+        <ul>
+            <li>📜 Student Visa (Tier 4)</li>
+            <li>📚 Offer Letter from a UK university</li>
+            <li>💰 Proof of Financial Stability</li>
+            <li>🏥 Health Insurance Coverage</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="/hecnew/js/header.js"></script>
+    <script src="/hecnew/js/footer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HEC</title>
+    <!-- Bootstrap CSS -->
+     <!-- Font Awesome CDN for Social Media Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="../css/theme.css">
+
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Contact Page Intro -->
+    <section class="contact-intro">
+        <h1>Get in Touch with Us</h1>
+        <p>We are here to assist you with all your higher education queries. Reach out to us for guidance on study destinations, scholarships, applications, and more.</p>
+    </section>
+<!-- Contact Form Section -->
+<section class="contact-form">
+    <h2>Request Information</h2>
+    <form id="contactForm">
+        <div class="form-group">
+            <input type="text" name="contactName" placeholder="Full Name*" required>
+            <input type="email" name="contactEmail" placeholder="Email*" required>
+            <input type="tel" name="contactMobile" placeholder="Mobile*" required>
+        </div>
+        <div class="form-group">
+            <select name="contactOffice" required>
+                <option value="" disabled selected>Nearest Office*</option>
+                <option value="lahore">Lahore</option>
+                <option value="karachi">Karachi</option>
+                <option value="islamabad">Islamabad</option>
+            </select>
+            <select name="contactCountry" required>
+                <option value="" disabled selected>Country of Interest*</option>
+                <option value="uk">United Kingdom</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select name="contactIntake" required>
+                <option value="" disabled selected>Select Upcoming Intake*</option>
+                <option value="fall">Fall 2025</option>
+                <option value="spring">Spring 2026</option>
+            </select>
+            <select name="contactCourse" required>
+                <option value="" disabled selected>Courses Interested In*</option>
+                <option value="engineering">Engineering</option>
+                <option value="business">Business Management</option>
+            </select>
+        </div>
+        <button type="submit" class="register-btn" id="submitContact">Register Now</button>
+    </form>
+</section>
+
+
+    <!-- Offices Section -->
+    <section class="offices">
+        <h2>Our Offices in Pakistan</h2>
+        <div class="offices-container">
+            <div class="office-box">
+                <h3>Lahore Office</h3>
+                <p>Gulberg, Lahore, Pakistan</p>
+                <p>📞 +92 300 1234567</p>
+                <p>📧 info@hecpakistan.com</p>
+            </div>
+            <div class="office-box">
+                <h3>Karachi Office</h3>
+                <p>Shahrah-e-Faisal, Karachi, Pakistan</p>
+                <p>📞 +92 300 7654321</p>
+                <p>📧 karachi@hecpakistan.com</p>
+            </div>
+            <div class="office-box">
+                <h3>Islamabad Office</h3>
+                <p>Blue Area, Islamabad, Pakistan</p>
+                <p>📞 +92 51 9876543</p>
+                <p>📧 islamabad@hecpakistan.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+
+    <!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+
+    <script src="/hecnew/Contact/contactus.js"></script>
+
+
+    
+</body>
+</html>

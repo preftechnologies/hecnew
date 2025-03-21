@@ -1,0 +1,426 @@
+/* ============================= */
+/*        HERO SECTION           */
+/* ============================= */
+.recruiter-hero {
+    background: linear-gradient(135deg, #2B6CB0, #38B2AC);
+    padding: 100px 0;
+    color: white;
+}
+
+.recruiter-hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Left Content */
+.recruiter-hero .text-box {
+    max-width: 50%;
+}
+
+.recruiter-hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.recruiter-hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.recruiter-hero .btn {
+    font-size: 18px;
+    padding: 14px 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.recruiter-hero .btn:hover {
+    background: #1A73E8;
+    transform: scale(1.05);
+}
+
+/* Right Image */
+.recruiter-hero .image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.recruiter-hero .image-container img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+.recruiter-hero .image-container img:hover {
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/*     RESPONSIVE DESIGN FIXES   */
+/* ============================= */
+@media (max-width: 992px) {
+    .recruiter-hero .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .recruiter-hero .text-box {
+        max-width: 100%;
+    }
+
+    .recruiter-hero .btn {
+        width: 80%;
+    }
+}
+
+/* ============================= */
+/*      RECRUITER BENEFITS       */
+/* ============================= */
+.recruiter-benefits {
+    padding: 60px 0;
+    background: #1E1E1E;
+    text-align: left;
+}
+
+.recruiter-benefits .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.recruiter-benefits .image-box img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.recruiter-benefits .text-box {
+    max-width: 50%;
+}
+
+.recruiter-benefits h6 {
+    color: #38B2AC;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.recruiter-benefits h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.recruiter-benefits ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recruiter-benefits li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recruiter-benefits li i {
+    color: #48BB78; /* Green Check Icons */
+}
+/* ============================= */
+/*          ABOUT US             */
+/* ============================= */
+.about-us {
+    background: #252525;
+    color: white;
+    text-align: left;
+    padding: 60px 0;
+}
+
+.about-us h6 {
+    color: #ED8936;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.about-us h2 {
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.about-us .highlight {
+    color: #38B2AC;
+    font-weight: bold;
+}
+
+.about-us .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.about-us .stat-item {
+    background: #1E1E1E;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: calc(33.33% - 20px); /* Ensures 3 items per row with spacing */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-us .stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.about-us .stat-item h3 {
+    font-size: 30px;
+    color: #ED8936;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.about-us .stat-item p {
+    font-size: 16px;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Responsive Design Fixes */
+@media (max-width: 992px) {
+    .about-us .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us .stat-item {
+        width: 90%;
+    }
+}
+
+/* ============================= */
+/*       FOOTER STYLES           */
+/* ============================= */
+.footer {
+    background: #1A1A1A;
+    color: white;
+    padding: 40px 0;
+    text-align: left;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #38B2AC;
+}
+
+.footer-column a {
+    font-size: 14px;
+    color: #E2E8F0;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #63B3ED;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #38B2AC;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #A0AEC0;
+}
+
+/* ============================= */
+/*    RESPONSIVE DESIGN FIXES    */
+/* ============================= */
+@media (max-width: 992px) {
+    .recruiter-hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .recruiter-hero .text-box {
+        max-width: 100%;
+    }
+
+    .recruiter-benefits .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .recruiter-benefits .text-box {
+        max-width: 100%;
+    }
+
+    .about-us .stat-item {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+                      
+
+/* ====== Pop-up Form Styling ====== */
+.popup-form-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Subtle blur effect */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Form Box */
+  .popup-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 380px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 22px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .close-btn:hover {
+    transform: scale(1.2);
+    color: #ff4d4d; /* Red color on hover */
+  }
+  
+  /* Form Title */
+  .popup-form h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2B6CB0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Fields */
+  .popup-form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .popup-form input,
+  .popup-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  .popup-form input:focus,
+  .popup-form textarea:focus {
+    border-color: #2B6CB0;
+    outline: none;
+    background: #fff;
+  }
+  
+  /* Submit Button */
+  .popup-form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #2B6CB0, #38B2AC);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .popup-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Smooth fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+       

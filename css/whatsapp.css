@@ -1,0 +1,70 @@
+/* WhatsApp Quick Contact Button Styles */
+
+#whatsapp-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366; /* WhatsApp Green */
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+#whatsapp-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+#whatsapp-container img {
+    width: 30px;
+    height: 30px;
+    animation: whatsappBounce 1.5s infinite;
+}
+
+#whatsapp-container span {
+    margin-left: 8px;
+    font-weight: 500;
+}
+
+/* Hover Effect */
+#whatsapp-container:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+}
+
+/* WhatsApp Bounce Animation */
+@keyframes whatsappBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive adjustments for small devices */
+@media screen and (max-width: 480px) {
+    #whatsapp-container span {
+        display: none;
+    }
+
+    #whatsapp-container {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px;
+    }
+
+    #whatsapp-container img {
+        width: 25px;
+        height: 25px;
+    }
+}

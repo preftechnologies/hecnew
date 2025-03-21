@@ -1,0 +1,306 @@
+/* ============================= */
+/*          HERO SECTION         */
+/* ============================= */
+.hero-section {
+    background: linear-gradient(135deg, #2B6CB0, #38B2AC);
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.hero-section h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.hero-section p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* Button should appear below the text */
+.hero-section .btn-primary {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Align left content properly */
+.hero-section .text-start {
+    text-align: left;
+}
+
+/* Center the image */
+.hero-section img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-section img:hover {
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/*      BOOK APPOINTMENT BUTTON  */
+/* ============================= */
+.btn-primary {
+    background: #2B6CB0;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #38B2AC;
+}
+
+/* ============================= */
+/*        POPUP FORM STYLES      */
+/* ============================= */
+.popup-form {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures popup is on top */
+}
+
+/* Active Class to Show Popup */
+.popup-form.active {
+    display: flex !important;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+    color: #1A202C !important;  /* Dark text for visibility */
+}
+
+/* ============================= */
+/*       POPUP CLOSE (X) BUTTON  */
+/* ============================= */
+.close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 30px;  /* Make it bigger */
+    font-weight: bold;
+    color: #F56565;  /* Red for visibility */
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.close:hover {
+    color: #C53030; /* Darker red on hover */
+    transform: scale(1.2); /* Slight zoom-in effect */
+}
+
+/* Mobile Friendly: Adjust for Smaller Screens */
+@media (max-width: 500px) {
+    .close {
+        font-size: 22px;
+        top: 5px;
+        right: 10px;
+    }
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-content button {
+    width: 100%;
+    padding: 12px;
+    background: #2B6CB0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.popup-content button:hover {
+    background: #38B2AC;
+}
+
+/* Animation for Popup */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* ============================= */
+/*      WINNING RECORD SECTION   */
+/* ============================= */
+/* ============================= */
+/*      WINNING RECORD SECTION   */
+/* ============================= */
+.winning-record {
+    background: silver;  /* Dark Background to Match Theme */
+    color: #E2E8F0; /* Light Gray Text for Readability */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.winning-record h6 {
+    color: #ED8936; /* Amber Accent for Highlight */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.winning-record h2 {
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #ffffff; /* Pure White for Better Contrast */
+}
+
+.winning-record p {
+    font-size: 18px;
+    color: white; /* Light Gray for Readability */
+    margin-bottom: 30px;
+}
+
+/* STAT CARDS */
+.stat-card {
+    background: darkkhaki; /* Darker Card Background */
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(107, 83, 83, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ICON COLORS */
+.stat-card i {
+    font-size: 50px;
+    color: #38B2AC; /* Teal Accent - Stands Out */
+    margin-bottom: 15px;
+}
+
+/* NUMBERS & TEXT */
+.stat-card h4 {
+    font-size: 28px;
+    color: #48BB78; /* Green Accent for Important Numbers */
+    font-weight: bold;
+}
+
+.stat-card p {
+    font-size: 16px;
+    color: white; /* Light Gray for Readability */
+    opacity: 0.9;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .stat-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+
+/* ============================= */
+/*     WHY STUDY ABROAD SECTION  */
+/* ============================= */
+.why-study-abroad {
+    background: #252525;
+    padding: 80px 0;
+    color: white;
+}
+
+.why-study-abroad h6 {
+    color: #ED8936;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.why-study-abroad h2 {
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.why-study-abroad p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.why-study-abroad img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.why-study-abroad img:hover {
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/*         RESPONSIVE FIXES      */
+/* ============================= */
+@media (max-width: 992px) {
+    .hero-section .container,
+    .why-study-abroad .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .winning-record .stat-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}

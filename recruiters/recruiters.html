@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Recruiter Page</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="recruiters.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+   <!-- Header Section (Loaded Dynamically) -->
+   <div id="header-container"></div>
+
+   <!-- Spacer to create space below the header -->
+   <div class="header-space"></div>
+
+   <!-- Recruiter Hero Section -->
+  <section class="recruiter-hero">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <!-- Left Content -->
+      <div class="text-box">
+        <h1 class="fw-bold">Let’s conquer the market as an Entrily</h1>
+        <p>
+          Entrily is looking for student recruitment partners to join our global network as active partners. 
+          A partner has full access to over 49,000+ trending courses delivered by more than 720+ top-ranked 
+          and leading institutions in top 10+ countries.
+        </p>
+        
+        <!-- Become a Recruiter Partner Button -->
+        <div class="recruiter-partner-section">
+          <button id="openRecruiterForm" class="become-recruiter-btn">Become a Recruiter Partner</button>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="image-container">
+        <img src="../images/intstudents.jpg" alt="Professional Recruiter" class="img-fluid rounded">
+      </div>
+    </div>
+  </section>
+
+  <!-- Recruiter Benefits Section -->
+  <section class="recruiter-benefits">
+    <div class="container">
+      <div class="image-box">
+        <img src="../images/partner2.jpg" alt="Recruiter Partnership">
+      </div>
+      <div class="text-box">
+        <h6>RECRUITER PARTNERSHIP</h6>
+        <h2>Benefits of becoming an exceptional recruitment partnership</h2>
+        <ul>
+          <li><i class="bi bi-check-circle-fill"></i> No upfront cost or hidden fees.</li>
+          <li><i class="bi bi-check-circle-fill"></i> Commission payouts for every student enrolled.</li>
+          <li><i class="bi bi-check-circle-fill"></i> Manage leads, search courses, and submit applications.</li>
+          <li><i class="bi bi-check-circle-fill"></i> Free training, visa assistance, and global reach.</li>
+          <li><i class="bi bi-check-circle-fill"></i> Open a world of opportunities for students.</li>
+        </ul>
+        <a href="partnersform.html" class="btn btn-primary">Become a recruiter partner</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about-us py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Content -->
+        <div class="col-md-6">
+          <h6 class="text-danger fw-bold">ABOUT US</h6>
+          <h2 class="fw-bold">
+            Your all-in-one platform for building connections and trust with more than
+            <span class="highlight">1 Million Prospective Students</span> who are ready for the next step.
+          </h2>
+        </div>
+
+        <!-- Right Content: Statistics -->
+        <div class="col-md-6">
+          <div class="stats">
+            <div class="stat-item">
+              <h3 class="text-danger fw-bold">406+</h3>
+              <p>Active Student Recruitment Partners</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="text-danger fw-bold">40,000+</h3>
+              <p>Students Enrolled Successfully</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="text-danger fw-bold">720+</h3>
+              <p>Global Institutions Application Processed</p>
+            </div>
+          </div>
+          <p class="description mt-4">
+            Entrily, a UK-based company, empowers international student recruitment. 
+            With a remarkable growth rate of 60% in 2023, Entrily boasts high application 
+            success and visa success rates, ensuring smooth transitions for aspiring international students.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pop-up Form for Recruiter Partner -->
+  <div id="recruiterPopupForm" class="popup-form-container">
+    <div class="popup-form">
+        <span class="close-btn" id="closeRecruiterForm">&times;</span>
+        <h2>Become a Recruiter Partner</h2>
+        <form id="recruiterForm">
+            <label for="recruiterName">Full Name</label>
+            <input type="text" id="recruiterName" name="recruiterName" required>
+
+            <label for="recruiterEmail">Email</label>
+            <input type="email" id="recruiterEmail" name="recruiterEmail" required>
+
+            <label for="recruiterCompany">Company Name</label>
+            <input type="text" id="recruiterCompany" name="recruiterCompany" required>
+
+            <label for="recruiterMessage">Message</label>
+            <textarea id="recruiterMessage" name="recruiterMessage" required></textarea>
+
+            <button type="submit" id="submitRecruiter">Submit</button>
+        </form>
+    </div>
+  </div>
+
+   <!-- Footer Section (Loaded Dynamically) -->
+   <div id="footer-container"></div>
+
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Load Header and Footer -->
+  <script src="../js/header.js"></script>
+  <script src="../js/footer.js"></script>
+
+  <!-- JS for Recruiter Form Button -->
+  <script src="/hecnew/recruiters/recruiters.js"></script>
+
+</body>
+</html>

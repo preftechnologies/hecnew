@@ -1,0 +1,91 @@
+/* ==================== Global Theme Styles ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #2B6CB0;
+  --secondary-color: #38B2AC;
+  --success-color: #48BB78;
+  --warning-color: #ED8936;
+  --danger-color: #F56565;
+  --light-color: #F7FAFC;
+  --dark-color: #1A202C;
+  --text-color: #E2E8F0;
+  --text-muted: #A0AEC0;
+  --card-bg: #2D3748;
+  --button-radius: 8px;
+  --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* General Styling */
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Background */
+body {
+  background-color: var(--dark-color);
+  color: var(--text-color);
+}
+
+/* Links */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--success-color);
+}
+
+/* Buttons */
+button, .btn {
+  padding: 10px 15px;
+  border-radius: var(--button-radius);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: var(--light-color);
+}
+
+.btn-danger:hover {
+  background-color: #C53030;
+}
+
+/* Containers & Layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Box Styling */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--button-radius);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}

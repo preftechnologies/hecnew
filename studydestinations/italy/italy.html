@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study in Italy</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/hecnew/css/theme.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: silver;
+            color: #333;
+        }
+        .hero {
+            position: relative;
+            background: url('/hecnew/images/italy-banner.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 80%;
+        }
+        .hero h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.3em;
+            max-width: 700px;
+            margin: auto;
+        }
+        .section {
+            background: lightblue;
+            padding: 50px 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.2em;
+            color: #2B6CB0;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #38B2AC;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Study in Italy</h1>
+            <p>Explore top-ranked universities, rich cultural heritage, and affordable education in Italy.</p>
+        </div>
+    </div>
+
+    <!-- General Information -->
+    <div class="section" id="general-info">
+        <h2>Why Study in Italy?</h2>
+        <p>Italy is home to **prestigious universities**, **affordable tuition fees**, and a **vibrant student life**. With its **rich cultural history** and **academic excellence**, it attracts thousands of international students each year.</p>
+        <ul>
+            <li>🏫 **World-renowned universities with centuries-old traditions**</li>
+            <li>🌎 **Affordable tuition fees and scholarships for international students**</li>
+            <li>📖 **High-quality research and academic programs in English**</li>
+            <li>💼 **Post-study work opportunities and industry connections**</li>
+        </ul>
+    </div>
+
+    <!-- Top Universities -->
+    <div class="section" id="top-universities">
+        <h2>Top Universities in Italy</h2>
+        <div class="universities-grid">
+            <div class="university">
+                <h3>University of Bologna</h3>
+                <p>One of the oldest universities in the world, known for humanities and research.</p>
+            </div>
+            <div class="university">
+                <h3>Politecnico di Milano</h3>
+                <p>Italy’s leading university for engineering, design, and architecture.</p>
+            </div>
+            <div class="university">
+                <h3>Sapienza University of Rome</h3>
+                <p>A top-ranked university offering diverse study programs.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scholarships -->
+    <div class="section" id="scholarships">
+        <h2>Scholarships for International Students</h2>
+        <p>Italy provides various scholarships to support international students.</p>
+        <ul>
+            <li>🎓 **Italian Government Scholarships for International Students**</li>
+            <li>💰 **Erasmus+ Scholarships**</li>
+            <li>🏛️ **University-specific financial aid programs**</li>
+        </ul>
+    </div>
+
+    <!-- Visa & Study Requirements -->
+    <div class="section" id="visa-requirements">
+        <h2>Visa & Study Requirements</h2>
+        <p>To study in Italy, students must meet the following requirements:</p>
+        <ul>
+            <li>📜 **Student Visa (for non-EU students)**</li>
+            <li>📚 **Letter of Admission from a Recognized Institution**</li>
+            <li>💰 **Proof of Financial Support (€6,000 - €7,000 per year required)**</li>
+            <li>🏥 **Health Insurance Coverage (mandatory for all students)**</li>
+        </ul>
+    </div>
+
+    <!-- Popular Courses & Fees -->
+    <div class="section" id="courses-fees">
+        <h2>Popular Courses & Tuition Fees</h2>
+        <table border="1" width="100%" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>Course</th>
+                <th>Average Tuition Fees (EUR per year)</th>
+            </tr>
+            <tr>
+                <td>Engineering</td>
+                <td>€1,000 - €4,000</td>
+            </tr>
+            <tr>
+                <td>Business & Management</td>
+                <td>€1,500 - €5,000</td>
+            </tr>
+            <tr>
+                <td>Medicine</td>
+                <td>€5,000 - €15,000</td>
+            </tr>
+            <tr>
+                <td>Computer Science</td>
+                <td>€1,200 - €4,500</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="/hecnew/js/header.js"></script>
+    <script src="/hecnew/js/footer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,538 @@
+
+
+
+/* ========== Simplified Hero Section ========== */
+
+.hero-section {
+  position: relative;
+  height: 80vh; 
+  background: url('/hecnew/images/collage_darker.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-section .overlay {
+  padding: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-section .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section .hero-content h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-section .hero-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh;
+  }
+
+  .hero-section .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section .hero-content p {
+    font-size: 1rem;
+  }
+}
+                    /* Latest News Section */
+                    .latest-news {
+                      background: darkgray;
+                      padding: 60px 20px;
+                      text-align: center;
+                  }
+                  
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2B6CB0;
+  margin-bottom: 30px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-item {
+  background: khaki;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-left: 5px solid #2B6CB0;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-left: 5px solid #38B2AC;
+}
+
+.news-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.news-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.news-date {
+  font-size: 12px;
+  color: #999;
+}
+
+
+
+/* INFO BOXES SECTION */
+.info-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title for Info Boxes */
+.info-title {
+  grid-column: 1 / -1; /* Make title span across the whole section */
+  font-size: 32px;
+  font-weight: bold;
+  color: #2B6CB0;
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Individual Info Box */
+.info-boxes .box {
+  background: linear-gradient(135deg, #2B6CB0, #38B2AC);
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  min-width: 250px;
+  max-width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Center-align text */
+.info-boxes .box h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info-boxes .box p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Hover Effect */
+.info-boxes .box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .info-boxes {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .info-boxes {
+    grid-template-columns: 1fr;
+  }
+}
+/* ========== PARTNERS SECTION ========== */
+.partners-section {
+  padding: 60px 20px;
+  background: silver; /* Light background for a clean and professional look */
+  text-align: center;
+}
+
+/* ========== SECTION HEADING ========== */
+.partners-section h2 {
+  font-size: 32px;
+  color: #2B6CB0;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* ========== PARTNER CONTAINER ========== */
+.partners {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows responsiveness */
+  align-items: stretch; /* Ensures equal height blocks */
+}
+
+/* ========== PARTNER BOXES ========== */
+.partner-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px; /* Ensures uniform width */
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px; /* ✅ FIXED HEIGHT for uniformity */
+}
+
+/* ========== PARTNER BOX HOVER EFFECT ========== */
+.partner-box:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== PARTNER IMAGES ========== */
+.partner-box img {
+  width: 100%;
+  border-radius: 8px;
+  height: 200px;
+  object-fit: cover; /* Ensures proper image display */
+}
+
+/* ========== PARTNER BOX TITLE ========== */
+.partner-box h3 {
+  font-size: 22px;
+  color: #2B6CB0;
+  margin: 15px 0 10px;
+  font-weight: bold;
+}
+
+/* ========== PARTNER BOX DESCRIPTION ========== */
+.partner-box p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  padding: 0 10px;
+  flex-grow: 1; /* ✅ Allows text to take available space */
+  overflow: hidden; /* ✅ Prevents text from pushing the button */
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* ✅ Limits text to 4 lines */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+/* ========== KNOW MORE BUTTON ========== */
+.know-more {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2B6CB0, #38B2AC);
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-self: center; /* ✅ Centers button */
+  margin-top: auto; /* ✅ Pushes button to the bottom */
+}
+
+/* Hover effect */
+.know-more:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ========== NAVIGATION ARROWS ========== */
+.navigation-arrows {
+  display: flex;
+  gap: 10px;
+}
+
+/* Arrow button styles */
+.arrow {
+  background: #2B6CB0;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Arrow hover effect */
+.arrow:hover {
+  background: #38B2AC;
+  transform: scale(1.1);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  .partners {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .partners-header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .navigation-arrows {
+      margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-section {
+      padding: 40px 15px;
+  }
+
+  .partner-box {
+      max-width: 90%;
+  }
+
+  .header-left h2 {
+      font-size: 24px;
+  }
+
+  .arrow {
+      font-size: 16px;
+      padding: 8px 12px;
+  }
+}
+                                       /* ========== UNIVERSITY PARTNERS SECTION ========== */
+
+                                      
+.partners-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header-left h2 {
+  font-size: 28px;
+  color: #2B6CB0;
+  font-weight: bold;
+}
+
+.partners-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: black; /* Clean light background */
+  text-align: center;
+}
+
+/* ========== INDIVIDUAL PARTNER BOX ========== */
+.partner {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect */
+.partner:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== UNIVERSITY LOGO STYLING ========== */
+.partner img {
+  width: 100%;
+  max-width: 140px; /* Ensures logos are uniform */
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Logo hover effect */
+.partner:hover img {
+  transform: scale(1.1);
+}
+
+/* ========== UNIVERSITY NAME STYLING ========== */
+.partner p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2B6CB0;
+  margin: 5px 0 0;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  .partners-list {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-list {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+      gap: 15px;
+  }
+
+  .partner img {
+      max-width: 120px;
+      height: 70px;
+  }
+
+  .partner p {
+      font-size: 14px;
+  }
+}
+
+  /* ========== Video Gallery Section ========== */
+.video-gallery {
+  background: silver; /* Dark Gradient Background */
+  padding: 60px 0;
+  color: #ffffff;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 40px;
+}
+
+/* Video Cards - Container */
+.video-gallery-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: stretch; /* Ensures all cards align properly */
+}
+
+/* Video Cards */
+.video-item {
+  background: #242F40;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 350px; /* Uniform width */
+  height: 450px; /* ✅ Fixed height for uniformity */
+}
+
+.video-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Video Styling */
+.video-container {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.video-container video {
+  width: 100%;
+  height: 200px; /* ✅ Fixed height to prevent uneven sizes */
+  object-fit: cover;
+}
+
+/* Card Body Styling */
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #d1d1d1;
+  flex-grow: 1; /* ✅ Allows text to adjust within fixed card height */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* ✅ Limits text to 3 lines */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+  
+
+ 
+
+ 
