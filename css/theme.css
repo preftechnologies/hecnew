@@ -1,91 +1,191 @@
-/* ==================== Global Theme Styles ==================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
-:root {
-  --primary-color: #2B6CB0;
-  --secondary-color: #38B2AC;
-  --success-color: #48BB78;
-  --warning-color: #ED8936;
-  --danger-color: #F56565;
-  --light-color: #F7FAFC;
-  --dark-color: #1A202C;
-  --text-color: #E2E8F0;
-  --text-muted: #A0AEC0;
-  --card-bg: #2D3748;
-  --button-radius: 8px;
-  --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
+/* ===============================
+   Refined Global Light Theme – HEC Website
+   Author: Pref Technologies
+   =============================== */
 
-/* General Styling */
-* {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body & Background */
-body {
-  background-color: var(--dark-color);
-  color: var(--text-color);
-}
-
-/* Links */
-a {
-  color: var(--secondary-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--success-color);
-}
-
-/* Buttons */
-button, .btn {
-  padding: 10px 15px;
-  border-radius: var(--button-radius);
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--light-color);
-}
-
-.btn-primary:hover {
-  background-color: var(--secondary-color);
-}
-
-.btn-danger {
-  background-color: var(--danger-color);
-  color: var(--light-color);
-}
-
-.btn-danger:hover {
-  background-color: #C53030;
-}
-
-/* Containers & Layout */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Box Styling */
-.card {
-  background-color: var(--card-bg);
-  border-radius: var(--button-radius);
-  box-shadow: var(--box-shadow);
-  padding: 20px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    width: 95%;
+   :root {
+    /* Primary Brand Colors */
+    --primary-color: #2B6CB0;       /* Deep Blue */
+    --secondary-color: #38B2AC;     /* Teal */
+    --success-color: #48BB78;       /* Green */
+    --warning-color: #ED8936;       /* Amber */
+    --danger-color: #F56565;        /* Red */
+  
+    /* Backgrounds */
+    --bg-light: #F9FAFB;            /* Light body background */
+    --bg-secondary: #FFFFFF;        /* Card/Section background */
+    --bg-muted: #EDF2F7;            /* Soft muted background (e.g., footer) */
+  
+    /* Text Colors */
+    --text-heading: #1A202C;        /* Headings: strong dark */
+    --text-body: #2D3748;           /* Paragraphs: normal dark */
+    --text-muted: #718096;          /* Muted/inactive */
+    --text-inverted: #FFFFFF;       /* For dark buttons */
+  
+    /* Border and Divider */
+    --border-color: #E2E8F0;
+  
+    /* Fonts */
+    --font-family-main: 'Inter', sans-serif;
+  
+    /* UI Styling */
+    --border-radius: 12px;
+    --transition-speed: 0.3s;
   }
-}
+  
+  /* Reset and Base Styling */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: var(--font-family-main);
+    background-color: var(--bg-light);
+    color: var(--text-body);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-heading);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  h4 { font-size: 1.5rem; }
+  h5 { font-size: 1.25rem; }
+  h6 { font-size: 1rem; }
+  
+  p, span, li {
+    color: var(--text-body);
+    font-size: 1rem;
+  }
+  
+  /* Muted Text */
+  .text-muted {
+    color: var(--text-muted);
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background var(--transition-speed);
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-inverted);
+  }
+  
+  .btn-primary:hover {
+    background-color: #2c5282;
+  }
+  
+  .btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-inverted);
+  }
+  
+  .btn-success {
+    background-color: var(--success-color);
+    color: var(--text-inverted);
+  }
+  
+  .btn-warning {
+    background-color: var(--warning-color);
+    color: var(--text-inverted);
+  }
+  
+  .btn-danger {
+    background-color: var(--danger-color);
+    color: var(--text-inverted);
+  }
+  
+  /* Cards and Containers */
+  .card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    color: var(--text-body);
+  }
+  
+  /* Links */
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+  }
+  
+  a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* Forms */
+  input, textarea, select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+    color: var(--text-body);
+  }
+  
+  input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  /* Responsive Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .btn {
+      width: 100%;
+    }
+  
+    .card {
+      padding: 1rem;
+    }
+  }
+  
+  /* Header and Footer */
+  .site-header, .site-footer {
+    background-color: var(--bg-muted);
+    padding: 1.5rem 0;
+    text-align: center;
+    color: var(--text-muted);
+  }
+  
+  /* Status Tags */
+  .status-success {
+    color: var(--success-color);
+  }
+  
+  .status-warning {
+    color: var(--warning-color);
+  }
+  
+  .status-danger {
+    color: var(--danger-color);
+  }
+  
