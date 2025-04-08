@@ -1,138 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students - Higher Education Consultants</title>
-
-    <!-- Bootstrap & Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/theme.css">
-    <link rel="stylesheet" href="students.css">
-
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-</head>
-<body class="bg-dark text-light">
-
-    <!-- Header (Loaded Dynamically) -->
-    <div id="header-container"></div>
-
-    <!-- Spacer for Header -->
-    <div class="header-space"></div>
-
-    <!-- Hero Section -->
-<section class="hero-section text-center py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Left Content: Text Box -->
-            <div class="col-lg-6 text-start">
-                <h1 class="fw-bold">Turn your dream of studying abroad into a reality</h1>
-                <p>With personalized guidance and tailored features designed just for you!</p>
-
-                <!-- Book Your Appointment Button (Below the Text) -->
-                <button id="openPopup" class="btn-primary">📅 Book Your Appointment Now</button>
-            </div>
-
-            <!-- Right Content: Image -->
-            <div class="col-lg-6 text-center">
-                <img src="/hecnew/images/students1.jpg" alt="Study Abroad" class="img-fluid rounded shadow">
-            </div>
-        </div>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Students - Higher Education Consultants
+  </title>
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link href="../css/theme.css" rel="stylesheet"/>
+  <link href="students.css" rel="stylesheet"/>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js">
+  </script>
+ </head>
+ <body class="bg-dark text-light students-page">
+  <!-- Header (Loaded Dynamically) -->
+  <div id="header-container">
+  </div>
+  <!-- Spacer for Header -->
+  <div class="header-space">
+  </div>
+  <!-- Hero Section -->
+  <section class="hero-section text-center py-5">
+   <div class="container">
+    <div class="row align-items-center">
+     <!-- Left Content: Text Box -->
+     <div class="col-lg-6 text-start">
+      <h1 class="fw-bold">
+       Turn your dream of studying abroad into a reality
+      </h1>
+      <p>
+       With personalized guidance and tailored features designed just for you!
+      </p>
+      <!-- Book Your Appointment Button (Below the Text) -->
+      <button class="btn-primary" id="openPopup">
+       📅 Book Your Appointment Now
+      </button>
+     </div>
+     <!-- Right Content: Image -->
+     <div class="col-lg-6 text-center">
+      <img alt="Study Abroad" class="img-fluid rounded shadow" src="/hecnew/images/students1.jpg"/>
+     </div>
     </div>
-</section>
-
-<!-- Popup Form (Initially Hidden) -->
-<div id="appointmentPopup" class="popup-form">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <h2>Book Your Appointment</h2>
-        <form id="appointmentForm">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit" class="btn-primary">Submit</button>
-        </form>
+   </div>
+  </section>
+  <!-- Popup Form (Initially Hidden) -->
+  <div class="popup-form" id="appointmentPopup">
+   <div class="popup-content">
+    <span class="close" onclick="closePopup()">
+     &times;
+    </span>
+    <h2>
+     Book Your Appointment
+    </h2>
+    <form id="appointmentForm">
+     <label for="name">
+      Full Name:
+     </label>
+     <input id="name" name="name" required="" type="text"/>
+     <label for="email">
+      Email:
+     </label>
+     <input id="email" name="email" required="" type="email"/>
+     <label for="phone">
+      Phone Number:
+     </label>
+     <input id="phone" name="phone" required="" type="tel"/>
+     <label for="message">
+      Message:
+     </label>
+     <textarea id="message" name="message" required="" rows="4"></textarea>
+     <button id="submitAppointment" class="btn-primary" type="submit">
+      Submit
+     </button>
+    </form>
+   </div>
+  </div>
+  <!-- Winning Record Section -->
+  <section class="winning-record py-5 text-center">
+   <div class="container">
+    <h6 class="text-danger fw-bold">
+     HEC Premium
+    </h6>
+    <h2 class="fw-bold">
+     HEC Winning Record
+    </h2>
+    <p class="text-muted">
+     HEC helps you every step of the way - from test preparation to finding the right institution and applying for a visa.
+    </p>
+    <!-- Statistics Grid -->
+    <div class="row gy-4 mt-4">
+     <div class="col-6 col-md-4">
+      <div class="stat-card bounce">
+       <i class="bi bi-clock-history display-4 text-primary">
+       </i>
+       <h4 class="mt-2">
+        250,000+
+       </h4>
+       <p class="text-muted">
+        Hours of counseling experience
+       </p>
+      </div>
+     </div>
+     <div class="col-6 col-md-4">
+      <div class="stat-card bounce">
+       <i class="bi bi-buildings display-4 text-primary">
+       </i>
+       <h4 class="mt-2">
+        4
+       </h4>
+       <p class="text-muted">
+        Branch offices with more on the way
+       </p>
+      </div>
+     </div>
+     <div class="col-6 col-md-4">
+      <div class="stat-card bounce">
+       <i class="bi bi-person-check display-4 text-primary">
+       </i>
+       <h4 class="mt-2">
+        40,000+
+       </h4>
+       <p class="text-muted">
+        Students placed abroad
+       </p>
+      </div>
+     </div>
     </div>
-</div>
-
-
-
-
-    <!-- Winning Record Section -->
-    <section class="winning-record py-5 text-center">
-        <div class="container">
-            <h6 class="text-danger fw-bold">HEC Premium</h6>
-            <h2 class="fw-bold">HEC Winning Record</h2>
-            <p class="text-muted">HEC helps you every step of the way - from test preparation to finding the right institution and applying for a visa.</p>
-
-            <!-- Statistics Grid -->
-            <div class="row gy-4 mt-4">
-                <div class="col-6 col-md-4">
-                    <div class="stat-card bounce">
-                        <i class="bi bi-clock-history display-4 text-primary"></i>
-                        <h4 class="mt-2">250,000+</h4>
-                        <p class="text-muted">Hours of counseling experience</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4">
-                    <div class="stat-card bounce">
-                        <i class="bi bi-buildings display-4 text-primary"></i>
-                        <h4 class="mt-2">4</h4>
-                        <p class="text-muted">Branch offices with more on the way</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4">
-                    <div class="stat-card bounce">
-                        <i class="bi bi-person-check display-4 text-primary"></i>
-                        <h4 class="mt-2">40,000+</h4>
-                        <p class="text-muted">Students placed abroad</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Study Abroad Section -->
-    <section class="why-study-abroad py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Left Content: Image -->
-                <div class="col-md-6 text-center">
-                    <img src="/hecnew/images/students2.jpg" alt="Why study abroad" class="img-fluid rounded shadow">
-                </div>
-
-                <!-- Right Content: Text -->
-                <div class="col-md-6">
-                    <h6 class="text-danger fw-bold">STUDY ABROAD</h6>
-                    <h2 class="fw-bold">Why study abroad?</h2>
-                    <p>Studying abroad is popular now because you can join the best institutions, gain international exposure, and unlock incredible career opportunities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer (Loaded Dynamically) -->
-    <div id="footer-container"></div>
-
-    <!-- Load Header and Footer -->
-    <script src="../js/header.js"></script>
-    <script src="../js/footer.js"></script>
-    <!-- Link to JavaScript File -->
-<script src="/hecnew/students/students.js"></script>
-
-
-</body>
+   </div>
+  </section>
+  <!-- Why Study Abroad Section -->
+  <section class="why-study-abroad py-5">
+   <div class="container">
+    <div class="row align-items-center">
+     <!-- Left Content: Image -->
+     <div class="col-md-6 text-center">
+      <img alt="Why study abroad" class="img-fluid rounded shadow" src="/hecnew/images/students2.jpg"/>
+     </div>
+     <!-- Right Content: Text -->
+     <div class="col-md-6">
+      <h6 class="text-danger fw-bold">
+       STUDY ABROAD
+      </h6>
+      <h2 class="fw-bold">
+       Why study abroad?
+      </h2>
+      <p>
+       Studying abroad is popular now because you can join the best institutions, gain international exposure, and unlock incredible career opportunities.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer (Loaded Dynamically) -->
+  <div id="footer-container">
+  </div>
+  <!-- Load Header and Footer -->
+  <script src="../js/header.js">
+  </script>
+  <script src="../js/footer.js">
+  </script>
+  <!-- Link to JavaScript File -->
+  <script src="/hecnew/students/students.js">
+  </script>
+ </body>
 </html>

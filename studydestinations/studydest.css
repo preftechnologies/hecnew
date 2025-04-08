@@ -1,10 +1,11 @@
-/* Study Destinations Page - Professional and Synchronized Styling */
+/* =============================== */
+/* Study Destinations – Bright Theme Integration */
+/* =============================== */
 
-/* Whole page background aligned with theme.css */
 body {
-    background-color: #0D1B2A;
-    font-family: 'Inter', sans-serif;
-    color: #FFFFFF;
+    background-color: var(--bg-light);
+    font-family: var(--font-family-main);
+    color: var(--text-body);
     margin: 0;
     padding: 0;
 }
@@ -14,29 +15,32 @@ body {
     margin-top: 0 !important;
 }
 
-/* Header section (smaller and optimized) */
+/* Header section - Bright style */
 .py-5.bg-dark {
     padding-top: 40px !important;
     padding-bottom: 40px !important;
-    background-color: #183453 !important; /* matches header.js navbar color */
+    background-color: var(--bg-muted) !important;
+    color: var(--text-heading);
 }
 
 .py-5.bg-dark h1 {
-    font-size: 2.2rem !important; /* smaller header text */
+    font-size: 2.2rem !important;
     padding-top: 40px !important;
+    color: var(--text-heading);
 }
 
 .py-5.bg-dark p {
     font-size: 1.1rem !important;
+    color: var(--text-muted);
 }
 
-/* Container styling - synchronized with header/footer */
+/* General container styling */
 .container {
     max-width: 1200px;
     margin: auto;
 }
 
-/* Country blocks - Professional & synchronized styling */
+/* Country blocks */
 .country-link {
     text-decoration: none;
 }
@@ -44,42 +48,43 @@ body {
 .country-block {
     background-size: cover;
     background-position: center;
-    height: 180px; /* professional height */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    height: 180px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .country-block h3 {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 8px 15px;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 10px 18px;
+    border-radius: var(--border-radius);
     font-size: 1.2rem;
-    color: #ffffff;
+    color: var(--text-heading);
     margin: 0;
-    transition: background 0.3s ease;
+    transition: background var(--transition-speed), color var(--transition-speed);
 }
 
 .country-block:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .country-block:hover h3 {
-    background: rgba(56, 178, 172, 0.8); /* matches secondary color #38B2AC */
+    background: rgba(56, 178, 172, 0.9); /* Teal with opacity */
+    color: var(--text-inverted);
 }
 
-/* Ensure consistency and professionalism */
+/* Layout spacing */
 .row {
     margin-top: 20px;
 }
 
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
     .py-5.bg-dark h1 {
         font-size: 1.8rem !important;

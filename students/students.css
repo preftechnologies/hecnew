@@ -2,9 +2,9 @@
 /*          HERO SECTION         */
 /* ============================= */
 .hero-section {
-    background: linear-gradient(135deg, #2B6CB0, #38B2AC);
+    background-color: var(--bg-light);
     padding: 100px 0;
-    color: white;
+    color: var(--text-body);
     text-align: center;
 }
 
@@ -56,8 +56,8 @@
 /*      BOOK APPOINTMENT BUTTON  */
 /* ============================= */
 .btn-primary {
-    background: #2B6CB0;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-body);
     padding: 12px 20px;
     font-size: 18px;
     border: none;
@@ -67,7 +67,7 @@
 }
 
 .btn-primary:hover {
-    background: #38B2AC;
+    background-color: var(--secondary-color);
 }
 
 /* ============================= */
@@ -92,7 +92,7 @@
 }
 
 .popup-content {
-    background: white;
+    background-color: var(--bg-secondary);
     padding: 20px;
     border-radius: 10px;
     width: 400px;
@@ -100,7 +100,7 @@
     position: relative;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.3s ease-in-out;
-    color: #1A202C !important;  /* Dark text for visibility */
+    color: var(--text-heading) !important;  /* Dark text for visibility */
 }
 
 /* ============================= */
@@ -112,7 +112,7 @@
     right: 0px;
     font-size: 30px;  /* Make it bigger */
     font-weight: bold;
-    color: #F56565;  /* Red for visibility */
+    color: var(--danger-color);  /* Red for visibility */
     background: none;
     border: none;
     cursor: pointer;
@@ -121,7 +121,7 @@
 
 /* Hover Effect */
 .close:hover {
-    color: #C53030; /* Darker red on hover */
+    color: var(--danger-color); /* Darker red on hover */
     transform: scale(1.2); /* Slight zoom-in effect */
 }
 
@@ -138,15 +138,15 @@ input, textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 }
 
 .popup-content button {
     width: 100%;
     padding: 12px;
-    background: #2B6CB0;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-body);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -154,7 +154,7 @@ input, textarea {
 }
 
 .popup-content button:hover {
-    background: #38B2AC;
+    background-color: var(--secondary-color);
 }
 
 /* Animation for Popup */
@@ -177,14 +177,14 @@ input, textarea {
 /*      WINNING RECORD SECTION   */
 /* ============================= */
 .winning-record {
-    background: silver;  /* Dark Background to Match Theme */
-    color: #E2E8F0; /* Light Gray Text for Readability */
+    background-color: var(--bg-muted);  /* Dark Background to Match Theme */
+    color: var(--text-body); /* Light Gray Text for Readability */
     padding: 80px 0;
     text-align: center;
 }
 
 .winning-record h6 {
-    color: #ED8936; /* Amber Accent for Highlight */
+    color: var(--warning-color); /* Amber Accent for Highlight */
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
@@ -195,18 +195,18 @@ input, textarea {
     font-size: 32px;
     line-height: 1.5;
     margin-bottom: 20px;
-    color: #ffffff; /* Pure White for Better Contrast */
+    color: var(--text-heading); /* Pure White for Better Contrast */
 }
 
 .winning-record p {
     font-size: 18px;
-    color: white; /* Light Gray for Readability */
+    color: var(--text-body); /* Light Gray for Readability */
     margin-bottom: 30px;
 }
 
 /* STAT CARDS */
 .stat-card {
-    background: darkkhaki; /* Darker Card Background */
+    background-color: var(--bg-secondary); /* Darker Card Background */
     padding: 30px;
     border-radius: 12px;
     text-align: center;
@@ -222,20 +222,20 @@ input, textarea {
 /* ICON COLORS */
 .stat-card i {
     font-size: 50px;
-    color: #38B2AC; /* Teal Accent - Stands Out */
+    color: var(--secondary-color); /* Teal Accent - Stands Out */
     margin-bottom: 15px;
 }
 
 /* NUMBERS & TEXT */
 .stat-card h4 {
     font-size: 28px;
-    color: #48BB78; /* Green Accent for Important Numbers */
+    color: var(--success-color); /* Green Accent for Important Numbers */
     font-weight: bold;
 }
 
 .stat-card p {
     font-size: 16px;
-    color: white; /* Light Gray for Readability */
+    color: var(--text-body); /* Light Gray for Readability */
     opacity: 0.9;
 }
 
@@ -252,13 +252,13 @@ input, textarea {
 /*     WHY STUDY ABROAD SECTION  */
 /* ============================= */
 .why-study-abroad {
-    background: #252525;
+    background-color: var(--bg-muted);
     padding: 80px 0;
-    color: white;
+    color: var(--text-body);
 }
 
 .why-study-abroad h6 {
-    color: #ED8936;
+    color: var(--warning-color);
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
@@ -303,4 +303,22 @@ input, textarea {
         width: 100%;
         margin-bottom: 15px;
     }
+}
+
+
+/* Force solid header background only on the Students Page */
+body.students-page .navbar {
+  background-color: var(--bg-muted) !important;
+  backdrop-filter: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.0); /* Optional subtle shadow */
+}
+
+
+/* Forcefully override header blur and transparency for Students Page */
+body.students-page .navbar {
+  background-color: var(--bg-muted) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
 }

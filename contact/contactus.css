@@ -1,20 +1,19 @@
 /* ============================= */
 /*       GENERAL STYLES          */
 /* ============================= */
-
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-family-main);
     margin: 0;
     padding: 0;
-    background: #121212; /* Dark Background */
-    color: #ffffff; /* Light text for contrast */
+    background: var(--bg-light);
+    color: var(--text-body);
 }
 
 /* ============================= */
 /*       HEADER & NAVBAR FIX     */
 /* ============================= */
 #header-container {
-    background: #2B6CB0; /* Deep Blue Theme */
+    background: var(--bg-muted);
 }
 
 /* ============================= */
@@ -22,9 +21,9 @@ body {
 /* ============================= */
 .contact-intro {
     text-align: center;
-    padding: 100px 20px 50px;
-    background: linear-gradient(135deg, #2B6CB0, #38B2AC);
-    color: white;
+    padding: 80px 20px 40px;
+    background: var(--bg-muted);
+    color: var(--text-heading);
 }
 
 .contact-intro h1 {
@@ -37,7 +36,7 @@ body {
     font-size: 18px;
     max-width: 800px;
     margin: 0 auto;
-    opacity: 0.9;
+    color: var(--text-muted);
 }
 
 /* ============================= */
@@ -47,14 +46,14 @@ body {
     max-width: 750px;
     margin: 50px auto;
     padding: 30px;
-    background: #1E1E1E;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    background: var(--bg-secondary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius);
     text-align: center;
 }
 
 .contact-form h2 {
-    color: #38B2AC;
+    color: var(--primary-color);
     font-size: 26px;
     margin-bottom: 20px;
 }
@@ -70,40 +69,40 @@ body {
 .form-group select {
     flex: 1;
     padding: 14px;
-    border: 2px solid #38B2AC;
-    background: #2A2A2A;
-    color: #ffffff;
-    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-body);
+    border-radius: var(--border-radius);
     font-size: 16px;
     outline: none;
     width: 100%;
-    transition: border 0.3s ease-in-out;
+    transition: border var(--transition-speed);
 }
 
 .form-group input:focus,
 .form-group select:focus {
-    border: 2px solid #48BB78;
+    border-color: var(--primary-color);
 }
 
 /* ============================= */
 /*       FORM SUBMIT BUTTON      */
 /* ============================= */
 .register-btn {
-    background: #ED8936;
-    color: white;
+    background: var(--warning-color);
+    color: var(--text-inverted);
     padding: 15px 20px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     font-size: 18px;
     width: 100%;
-    transition: all 0.3s ease-in-out;
+    transition: all var(--transition-speed);
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .register-btn:hover {
-    background: #C76C22;
+    background: #C76C22; /* darker amber hover */
     transform: scale(1.05);
 }
 
@@ -118,7 +117,7 @@ body {
 
 .offices h2 {
     font-size: 28px;
-    color: #38B2AC;
+    color: var(--primary-color);
     margin-bottom: 30px;
 }
 
@@ -131,23 +130,23 @@ body {
 }
 
 .office-box {
-    background: #1E1E1E;
+    background: var(--bg-secondary);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
     width: 300px;
     text-align: left;
-    border-left: 5px solid #2B6CB0;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-left: 5px solid var(--primary-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .office-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .office-box h3 {
-    color: #38B2AC;
+    color: var(--secondary-color);
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -155,11 +154,8 @@ body {
 .office-box p {
     margin: 5px 0;
     font-size: 16px;
-    opacity: 0.9;
+    color: var(--text-body);
 }
-
-
-
 
 /* ============================= */
 /*     RESPONSIVE DESIGN FIXES   */

@@ -2,9 +2,9 @@
 /*        HERO SECTION           */
 /* ============================= */
 .recruiter-hero {
-    background: linear-gradient(135deg, #2B6CB0, #38B2AC);
+    background-color: var(--bg-light);
     padding: 100px 0;
-    color: white;
+    color: var(--text-body);
 }
 
 .recruiter-hero .container {
@@ -35,15 +35,21 @@
 
 .recruiter-hero .btn {
     font-size: 18px;
-    padding: 14px 22px;
-    font-weight: bold;
+    padding: 14px 32px;
+    font-weight: 600;
     text-transform: uppercase;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-inverted);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-in-out, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .recruiter-hero .btn:hover {
-    background: #1A73E8;
-    transform: scale(1.05);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Right Image */
@@ -88,7 +94,7 @@
 /* ============================= */
 .recruiter-benefits {
     padding: 60px 0;
-    background: #1E1E1E;
+    background-color: var(--bg-muted);
     text-align: left;
 }
 
@@ -111,7 +117,7 @@
 }
 
 .recruiter-benefits h6 {
-    color: #38B2AC;
+    color: var(--secondary-color);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -135,20 +141,20 @@
 }
 
 .recruiter-benefits li i {
-    color: #48BB78; /* Green Check Icons */
+    color: var(--success-color); /* Green Check Icons */
 }
 /* ============================= */
 /*          ABOUT US             */
 /* ============================= */
 .about-us {
-    background: #252525;
-    color: white;
+    background-color: var(--bg-muted);
+    color: var(--text-body);
     text-align: left;
     padding: 60px 0;
 }
 
 .about-us h6 {
-    color: #ED8936;
+    color: var(--warning-color);
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
@@ -162,7 +168,7 @@
 }
 
 .about-us .highlight {
-    color: #38B2AC;
+    color: var(--secondary-color);
     font-weight: bold;
 }
 
@@ -175,7 +181,7 @@
 }
 
 .about-us .stat-item {
-    background: #1E1E1E;
+    background-color: var(--bg-muted);
     padding: 25px;
     border-radius: 12px;
     text-align: center;
@@ -191,7 +197,7 @@
 
 .about-us .stat-item h3 {
     font-size: 30px;
-    color: #ED8936;
+    color: var(--warning-color);
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -218,8 +224,8 @@
 /*       FOOTER STYLES           */
 /* ============================= */
 .footer {
-    background: #1A1A1A;
-    color: white;
+    background-color: var(--bg-muted);
+    color: var(--text-body);
     padding: 40px 0;
     text-align: left;
 }
@@ -242,12 +248,12 @@
     font-size: 18px;
     margin-bottom: 15px;
     font-weight: bold;
-    color: #38B2AC;
+    color: var(--secondary-color);
 }
 
 .footer-column a {
     font-size: 14px;
-    color: #E2E8F0;
+    color: var(--text-body);
     text-decoration: none;
     display: block;
     margin-bottom: 8px;
@@ -265,13 +271,13 @@
 }
 
 .social-icons a {
-    color: white;
+    color: var(--text-body);
     font-size: 24px;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
-    color: #38B2AC;
+    color: var(--secondary-color);
     transform: scale(1.1);
 }
 
@@ -279,7 +285,7 @@
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
-    color: #A0AEC0;
+    color: var(--text-muted);
 }
 
 /* ============================= */
@@ -329,7 +335,7 @@
   
   /* Form Box */
   .popup-form {
-    background: #ffffff;
+    background-color: var(--bg-secondary);
     padding: 30px;
     border-radius: 12px;
     width: 380px;
@@ -345,21 +351,21 @@
     top: 15px;
     right: 15px;
     font-size: 22px;
-    color: #333;
+    color: var(--text-heading);
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
   }
   
   .close-btn:hover {
     transform: scale(1.2);
-    color: #ff4d4d; /* Red color on hover */
+    color: var(--danger-color); /* Red color on hover */
   }
   
   /* Form Title */
   .popup-form h2 {
     font-size: 22px;
     font-weight: bold;
-    color: #2B6CB0;
+    color: var(--primary-color);
     text-align: center;
     margin-bottom: 20px;
   }
@@ -368,7 +374,7 @@
   .popup-form label {
     font-size: 14px;
     font-weight: 600;
-    color: #333;
+    color: var(--text-heading);
     display: block;
     margin-bottom: 5px;
   }
@@ -378,26 +384,26 @@
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     font-size: 14px;
-    background: #f9f9f9;
+    background-color: var(--bg-secondary);
     transition: border-color 0.3s ease;
   }
   
   .popup-form input:focus,
   .popup-form textarea:focus {
-    border-color: #2B6CB0;
+    border-color: var(--primary-color);
     outline: none;
-    background: #fff;
+    background-color: var(--bg-secondary);
   }
   
   /* Submit Button */
   .popup-form button {
     width: 100%;
     padding: 12px;
-    background: linear-gradient(135deg, #2B6CB0, #38B2AC);
-    color: white;
+    background-color: var(--bg-light);
+    color: var(--text-body);
     font-size: 16px;
     font-weight: bold;
     border: none;
