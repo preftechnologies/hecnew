@@ -6,8 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Database connection failed: " . $conn->connect_error);
     }
 
-    // Ensure all fields exist before processing
-    if (!isset($_POST['contactName'], $_POST['contactEmail'], $_POST['contactMobile'], $_POST['contactOffice'], $_POST['contactCountry'], $_POST['contactIntake'], $_POST['contactCourse'])) {
+    // Ensure all required fields exist before processing
+    if (!isset($_POST['contactName'], $_POST['contactEmail'], $_POST['contactMobile'], $_POST['contactSubject'], $_POST['contactMessage'])) {
         echo "Error: Missing form data.";
         exit();
     }
@@ -15,13 +15,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = trim($conn->real_escape_string($_POST['contactName']));
     $email = trim($conn->real_escape_string($_POST['contactEmail']));
     $mobile = trim($conn->real_escape_string($_POST['contactMobile']));
-    $office = trim($conn->real_escape_string($_POST['contactOffice']));
-    $country = trim($conn->real_escape_string($_POST['contactCountry']));
-    $intake = trim($conn->real_escape_string($_POST['contactIntake']));
-    $course = trim($conn->real_escape_string($_POST['contactCourse']));
+    $subject = trim($conn->real_escape_string($_POST['contactSubject']));
+    $message = trim($conn->real_escape_string($_POST['contactMessage']));
 
-    $stmt = $conn->prepare("INSERT INTO contactus (name, email, mobile, nearest_office, country_interest, upcoming_intake, course_interest) VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssss", $name, $email, $mobile, $office, $country, $intake, $course);
+    // Update the INSERT query to reflect only the new universal fields.
+    // (Ensure your 'contactus' table has corresponding columns, e.g., name, email, mobile, subject, message.)
+    $stmt = $conn->prepare("INSERT INTO contactus (name, email, mobile, subject, message) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $name, $email, $mobile, $subject, $message);
 
     if ($stmt->execute()) {
         echo "Thank you! Your message has been received.";
@@ -42,8 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->setFrom('alikhanblog111@gmail.com', 'HEC Website');
         $mail->addAddress('alikhanblog111@gmail.com');
         $mail->Subject = "New Contact Form Submission";
-        $mail->Body = "New Contact Request:\n\nName: $name\nEmail: $email\nMobile: $mobile\nOffice: $office\nCountry: $country\nIntake: $intake\nCourse: $course";
-
+        $mail->Body = "New Contact Request:\n\nName: $name\nEmail: $email\nMobile: $mobile\nSubject: $subject\nMessage:\n$message";
+        
         if ($mail->send()) {
             echo " Email sent successfully!";
         } else {

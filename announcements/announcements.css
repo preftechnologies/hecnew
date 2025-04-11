@@ -1,0 +1,108 @@
+/* 🚨 Announcement Banner Styles */
+
+.announcement-banner {
+    width: 100%;
+    background-color: #f56565; /* Red */
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    position: relative;
+  }
+  
+  .announcement-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 10s linear infinite;
+    display: flex;
+    align-items: center;
+  }
+  
+  .announcement-text {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    padding-right: 20px;
+  }
+  
+  .apply-btn {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 12px;
+    background-color: #fff;
+    color: #f56565;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .apply-btn:hover {
+    background-color: #fed7d7;
+    color: #c53030;
+  }
+  
+  /* Scrolling Animation */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Blinking effect */
+  .blinking {
+    animation: blinkingText 1.5s infinite;
+  }
+  
+  @keyframes blinkingText {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  
+
+
+  /* 📦 Announcement Cards Section */
+
+.announcement-blocks {
+  background-color: #f8f9fa;
+}
+
+.announcement-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border-left: 5px solid #2B6CB0;
+  transition: transform 0.3s ease;
+  animation: pop-in 1s ease both;
+  height: 100%;
+}
+
+.announcement-card h5 {
+  color: #2B6CB0;
+  font-size: 18px;
+  margin-bottom: 10px;
+  animation: blinkingText 1.5s infinite;
+}
+
+.announcement-card p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.announcement-card .btn {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+/* Pop Animation */
+@keyframes pop-in {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}

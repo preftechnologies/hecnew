@@ -74,3 +74,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(document.querySelector(".info-boxes"));
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("announcements/announcements.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("announcement-container").innerHTML = data;
+      });
+  });
+  
+  
