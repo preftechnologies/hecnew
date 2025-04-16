@@ -1,0 +1,28 @@
+<div id="popupContactForm" class="popup-form-overlay">
+    <div class="popup-form-box">
+      <span class="close-btn" onclick="closePopupForm()">&times;</span>
+      <h2>We’re Here to Help</h2>
+      <form id="popupForm">
+        <div class="form-group">
+          <input type="text" name="contactName" placeholder="Full Name*" required />
+          <input type="email" name="contactEmail" placeholder="Email Address*" required />
+        </div>
+        <div class="form-group">
+          <input type="tel" name="contactMobile" placeholder="Phone Number*" required />
+          <select name="contactSubject" required>
+            <option value="" disabled selected>Type of Inquiry*</option>
+            <option value="admission">Admission Guidance</option>
+            <option value="recruitment">Become a Recruiter</option>
+            <option value="partnership">Institutional Partnership</option>
+            <option value="event">Events / Webinars</option>
+            <option value="general">General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea name="contactMessage" placeholder="Please write your message..." rows="5" required></textarea>
+        </div>
+        <button type="submit" class="register-btn" id="popupSubmit">Send Message</button>
+      </form>
+    </div>
+  </div>
+  

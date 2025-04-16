@@ -280,6 +280,20 @@
   <script src="announcements/announcements.js"></script>
 
 
+  <!-- Popup Form Loader -->
+<link rel="stylesheet" href="popupform/popupform.css" />
+<div id="popupContainer"></div>
+<script>
+  fetch('popupform/popupform.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('popupContainer').innerHTML = html;
+    });
+</script>
+<script src="popupform/popupform.js"></script>
+
+
+
     
 
 </body>
