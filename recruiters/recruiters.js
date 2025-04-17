@@ -1,41 +1,50 @@
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Open the recruiter form popup
-    document.getElementById("openRecruiterForm").addEventListener("click", function() {
-        document.getElementById("recruiterPopupForm").style.display = "flex";
+// recruiters.js
+document.addEventListener("DOMContentLoaded", () => {
+    const popup      = document.getElementById("recruiterPopupForm");
+    const closeBtn   = document.getElementById("closeRecruiterForm");
+    const form       = document.getElementById("recruiterForm");
+    const submitBtn  = document.getElementById("submitRecruiter");
+  
+    // Open on every button with this class
+    document.querySelectorAll(".openRecruiterForm").forEach(btn =>
+      btn.addEventListener("click", () => {
+        popup.style.display = "flex";
+      })
+    );
+  
+    // Close popup
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
     });
-
-    // Close the recruiter form popup
-    document.getElementById("closeRecruiterForm").addEventListener("click", function() {
-        document.getElementById("recruiterPopupForm").style.display = "none";
+  
+    // Close when clicking outside form
+    window.addEventListener("click", e => {
+      if (e.target === popup) popup.style.display = "none";
     });
-
-    // Handle form submission
-    document.getElementById("recruiterForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent normal form submission
-
-        let formData = new FormData(this);
-        const submitBtn = document.getElementById("submitRecruiter");
-        const originalText = submitBtn.innerHTML;
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...`;
-
-        fetch("/hecnew/submit_recruiter.php", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            alert(data);
-            document.getElementById("recruiterPopupForm").style.display = "none";
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            alert("Something went wrong. Please try again.");
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
+  
+    // Submit handler
+    form.addEventListener("submit", async e => {
+      e.preventDefault();
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...`;
+  
+      try {
+        const res  = await fetch("/hecnew/submit_recruiter.php", {
+          method: "POST",
+          body: new FormData(form)
         });
+        const text = await res.text();
+        alert(text);
+        popup.style.display = "none";
+        form.reset();
+      } catch (err) {
+        console.error("Error:", err);
+        alert("Something went wrong. Please try again.");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
     });
-});
+  });
+  

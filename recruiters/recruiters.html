@@ -1,152 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Recruiter Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Become a Recruitment Partner - HEC</title>
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/theme.css">
-  <link rel="stylesheet" href="recruiters.css">
-
-  <!-- Favicon -->
-  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <link rel="stylesheet" href="../css/theme.css"/>
+  <link rel="stylesheet" href="recruiters.css"/>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
 </head>
 <body>
 
-   <!-- Header Section (Loaded Dynamically) -->
-   <div id="header-container"></div>
+  <div id="header-container"></div>
+  <div class="header-space"></div>
 
-   <!-- Spacer to create space below the header -->
-   <div class="header-space"></div>
+  <!-- Hero Section -->
+  <section class="hero-image-banner text-white d-flex align-items-center justify-content-center text-center">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1 class="display-4 fw-bold">Unlock Global Opportunities with HEC</h1>
+      <p class="lead mb-4">Partner with us to connect talented students with leading educational institutions worldwide.</p>
+      <!-- updated to class instead of duplicate id -->
+      <button class="btn btn-primary px-4 py-2 openRecruiterForm">
+        Become a Recruiter Partner
+      </button>
+    </div>
+  </section>
 
-   <!-- Recruiter Hero Section -->
-  <section class="recruiter-hero">
-    <div class="container d-flex align-items-center justify-content-between">
-      
-      <!-- Left Content -->
-      <div class="text-box">
-        <h1 class="fw-bold">Let’s conquer the market as an Entrily</h1>
-        <p>
-          Entrily is looking for student recruitment partners to join our global network as active partners. 
-          A partner has full access to over 49,000+ trending courses delivered by more than 720+ top-ranked 
-          and leading institutions in top 10+ countries.
-        </p>
-        
-        <!-- Become a Recruiter Partner Button -->
-        <div class="recruiter-partner-section">
-          <button id="openRecruiterForm" class="become-recruiter-btn">Become a Recruiter Partner</button>
+  <!-- Why Partner Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Why Partner with HEC?</h2>
+        <p class="lead">We offer a supportive ecosystem for your recruitment success.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 rounded shadow-sm h-100 d-flex flex-column align-items-center justify-content-center">
+            <i class="bi bi-globe fs-1 text-primary mb-3"></i>
+            <h5 class="fw-bold">Global Network</h5>
+            <p class="text-muted text-center">Access a vast pool of prospective students from diverse backgrounds.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 rounded shadow-sm h-100 d-flex flex-column align-items-center justify-content-center">
+            <i class="bi bi-handshake-fill fs-1 text-success mb-3"></i>
+            <h5 class="fw-bold">Dedicated Support</h5>
+            <p class="text-muted text-center">Receive comprehensive onboarding and ongoing support from our expert team.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 rounded shadow-sm h-100 d-flex flex-column align-items-center justify-content-center">
+            <i class="bi bi-award-fill fs-1 text-warning mb-3"></i>
+            <h5 class="fw-bold">Trusted Platform</h5>
+            <p class="text-muted text-center">Benefit from our established reputation and ethical practices in international education.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 rounded shadow-sm h-100 d-flex flex-column align-items-center justify-content-center">
+            <i class="bi bi-cash-coin fs-1 text-info mb-3"></i>
+            <h5 class="fw-bold">Transparent Processes</h5>
+            <p class="text-muted text-center">Enjoy clear communication and efficient processes for student placements and commissions.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 rounded shadow-sm h-100 d-flex flex-column align-items-center justify-content-center">
+            <i class="bi bi-graph-up fs-1 text-secondary mb-3"></i>
+            <h5 class="fw-bold">Growth Opportunities</h5>
+            <p class="text-muted text-center">Expand your agency's reach and impact in the global education market.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 rounded shadow-sm h-100 d-flex flex-column align-items-center justify-content-center">
+            <i class="bi bi-people-fill fs-1 text-danger mb-3"></i>
+            <h5 class="fw-bold">Community & Collaboration</h5>
+            <p class="text-muted text-center">Connect with a network of fellow recruiters and educational partners.</p>
+          </div>
         </div>
       </div>
-
-      <!-- Right Image -->
-      <div class="image-container">
-        <img src="../images/intstudents.jpg" alt="Professional Recruiter" class="img-fluid rounded">
-      </div>
     </div>
   </section>
 
-  <!-- Recruiter Benefits Section -->
-  <section class="recruiter-benefits">
-    <div class="container">
-      <div class="image-box">
-        <img src="../images/partner2.jpg" alt="Recruiter Partnership">
-      </div>
-      <div class="text-box">
-        <h6>RECRUITER PARTNERSHIP</h6>
-        <h2>Benefits of becoming an exceptional recruitment partnership</h2>
-        <ul>
-          <li><i class="bi bi-check-circle-fill"></i> No upfront cost or hidden fees.</li>
-          <li><i class="bi bi-check-circle-fill"></i> Commission payouts for every student enrolled.</li>
-          <li><i class="bi bi-check-circle-fill"></i> Manage leads, search courses, and submit applications.</li>
-          <li><i class="bi bi-check-circle-fill"></i> Free training, visa assistance, and global reach.</li>
-          <li><i class="bi bi-check-circle-fill"></i> Open a world of opportunities for students.</li>
-        </ul>
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- About Us Section -->
-  <section class="about-us py-5">
+  <!-- Our Impact Section -->
+  <section class="bg-light py-5">
     <div class="container">
       <div class="row align-items-center">
-        <!-- Left Content -->
         <div class="col-md-6">
-          <h6 class="text-danger fw-bold">ABOUT US</h6>
-          <h2 class="fw-bold">
-            Your all-in-one platform for building connections and trust with more than
-            <span class="highlight">1 Million Prospective Students</span> who are ready for the next step.
-          </h2>
+          <h6 class="text-primary fw-bold">OUR IMPACT</h6>
+          <h2 class="fw-bold mb-4">Connecting Aspirations with Opportunities</h2>
+          <p class="lead text-muted mb-4">We are proud to facilitate the educational journeys of countless students, empowering them to achieve their academic and career goals.</p>
+          <p class="text-muted">Our strong relationships with universities and our dedicated support for recruiters ensure a seamless and successful experience for everyone involved.</p>
         </div>
-
-        <!-- Right Content: Statistics -->
         <div class="col-md-6">
-          <div class="stats">
-            <div class="stat-item">
-              <h3 class="text-danger fw-bold">406+</h3>
-              <p>Active Student Recruitment Partners</p>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="bg-white rounded shadow-sm p-4 text-center">
+                <h3 class="text-success fw-bold">400+</h3>
+                <p class="mb-0 text-muted">Active Recruitment Partners</p>
+              </div>
             </div>
-            <div class="stat-item">
-              <h3 class="text-danger fw-bold">40,000+</h3>
-              <p>Students Enrolled Successfully</p>
+            <div class="col-md-6 mb-4">
+              <div class="bg-white rounded shadow-sm p-4 text-center">
+                <h3 class="text-info fw-bold">40,000+</h3>
+                <p class="mb-0 text-muted">Students Enrolled</p>
+              </div>
             </div>
-            <div class="stat-item">
-              <h3 class="text-danger fw-bold">720+</h3>
-              <p>Global Institutions Application Processed</p>
+            <div class="col-md-6">
+              <div class="bg-white rounded shadow-sm p-4 text-center">
+                <h3 class="text-warning fw-bold">700+</h3>
+                <p class="mb-0 text-muted">Partner Institutions</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="bg-white rounded shadow-sm p-4 text-center">
+                <h3 class="text-primary fw-bold">95%+</h3>
+                <p class="mb-0 text-muted">Visa Success Rate</p>
+              </div>
             </div>
           </div>
-          <p class="description mt-4">
-            Entrily, a UK-based company, empowers international student recruitment. 
-            With a remarkable growth rate of 60% in 2023, Entrily boasts high application 
-            success and visa success rates, ensuring smooth transitions for aspiring international students.
-          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pop-up Form for Recruiter Partner -->
+  <!-- Footer Call‑to‑Action -->
+  <section class="py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Ready to Make a Difference?</h2>
+      <p class="lead mb-4">Join our growing network of recruitment partners and help students achieve their dreams of international education.</p>
+      <!-- also uses the shared class -->
+      <button class="btn btn-light btn-lg px-5 py-3 openRecruiterForm">
+        Become a Partner Today
+      </button>
+    </div>
+  </section>
+
+  <!-- Popup Form Container -->
   <div id="recruiterPopupForm" class="popup-form-container">
     <div class="popup-form">
-        <span class="close-btn" id="closeRecruiterForm">&times;</span>
-        <h2>Become a Recruiter Partner</h2>
-        <form id="recruiterForm">
-            <label for="recruiterName">Full Name</label>
-            <input type="text" id="recruiterName" name="recruiterName" required>
+      <span class="close-btn" id="closeRecruiterForm">&times;</span>
+      <h2>Become a Recruiter Partner</h2>
+      <form id="recruiterForm">
+        <label for="recruiterName">Full Name</label>
+        <input type="text" id="recruiterName" name="recruiterName" required>
 
-            <label for="recruiterEmail">Email</label>
-            <input type="email" id="recruiterEmail" name="recruiterEmail" required>
+        <label for="recruiterEmail">Email</label>
+        <input type="email" id="recruiterEmail" name="recruiterEmail" required>
 
-            <label for="recruiterCompany">Company Name</label>
-            <input type="text" id="recruiterCompany" name="recruiterCompany" required>
+        <label for="recruiterCompany">Company Name</label>
+        <input type="text" id="recruiterCompany" name="recruiterCompany" required>
 
-            <label for="recruiterMessage">Message</label>
-            <textarea id="recruiterMessage" name="recruiterMessage" required></textarea>
+        <label for="recruiterMessage">Message</label>
+        <textarea id="recruiterMessage" name="recruiterMessage" rows="5" required></textarea>
 
-            <button type="submit" id="submitRecruiter">Submit</button>
-        </form>
+        <button type="submit" id="submitRecruiter" class="btn btn-primary w-100">Submit Application</button>
+      </form>
     </div>
   </div>
 
-   <!-- Footer Section (Loaded Dynamically) -->
-   <div id="footer-container"></div>
+  <div id="footer-container"></div>
 
-  <!-- JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Load Header and Footer -->
   <script src="../js/header.js"></script>
   <script src="../js/footer.js"></script>
-
-  <!-- JS for Recruiter Form Button -->
   <script src="/hecnew/recruiters/recruiters.js"></script>
-
 </body>
 </html>

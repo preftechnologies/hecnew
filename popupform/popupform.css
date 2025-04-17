@@ -1,84 +1,105 @@
-/* Center the popup using flex instead of margin so the entire form is visible */
+/* Stylish Popup Form for Professional & Modern Look */
+
+/* Overlay: Full screen, flex centered, with slight padding */
 .popup-form-overlay {
-  display: none;
+  display: none; /* hidden by default */
   position: fixed;
   z-index: 10000;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 
+/* Popup container with new gradient background */
 .popup-form-box {
-  background: var(--bg-secondary);
-  color: var(--text-body);
-  width: 90%;
-  max-width: 500px;
-  padding: 30px;
-  border-radius: var(--border-radius);
   position: relative;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: var(--border-radius);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   animation: fadeIn 0.4s ease-in-out;
-  /* Removed fixed margin and max-height so that the form always displays fully */
+  /* New stylish gradient background */
+  background: linear-gradient(135deg, #e0efff 0%, #cff7f1 100%);
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
+/* Popup header */
 .popup-form-box h2 {
-  color: var(--primary-color);
-  margin-bottom: 20px;
-  font-size: 24px;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
   text-align: center;
+  /* Use brand primary color for contrast */
+  color: #2B6CB0;
 }
 
+/* Form groups arranged in two columns to reduce vertical space */
 .popup-form-box .form-group {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 15px;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
+/* Each field takes half the width in a two-item row */
+.popup-form-box .form-group > * {
+  flex: 1;
+}
+
+/* Inputs, selects, textareas style */
 .popup-form-box input,
 .popup-form-box select,
 .popup-form-box textarea {
   width: 100%;
-  padding: 14px;
-  font-size: 16px;
-  border: 1px solid var(--border-color);
+  padding: 12px;
+  font-size: 0.9rem;
+  border: 1px solid #cbd5e0; /* subtle border */
   border-radius: var(--border-radius);
-  background: var(--bg-secondary);
+  background: #ffffff; /* white background for clarity */
   color: var(--text-body);
 }
 
+.popup-form-box input:focus,
+.popup-form-box select:focus,
+.popup-form-box textarea:focus {
+  border-color: #2B6CB0;
+  outline: none;
+}
+
+/* Stylish gradient submit button using brand colors */
 .register-btn {
-  background: var(--warning-color);
+  background: linear-gradient(45deg, #38B2AC, #2B6CB0);
   color: var(--text-inverted);
-  padding: 14px;
+  padding: 12px;
   border: none;
-  font-size: 18px;
+  font-size: 1rem;
   width: 100%;
   border-radius: var(--border-radius);
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: transform var(--transition-speed), background var(--transition-speed);
 }
 
 .register-btn:hover {
-  background: #C76C22;
   transform: scale(1.03);
 }
 
+/* Close button in the top-right corner */
 .close-btn {
   position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 24px;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
   cursor: pointer;
   color: var(--text-muted);
 }
 
+/* Fade in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -87,5 +108,39 @@
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+
+/* For shorter viewports (under ~700px height), allow minimal scrolling if absolutely needed */
+@media (max-height: 700px) {
+  .popup-form-box {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+/* For tablets and larger screens (≥768px) */
+@media (min-width: 768px) {
+  .popup-form-box {
+    padding: 24px;
+    font-size: 0.95rem;
+  }
+
+  .popup-form-box h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* For desktops or large screens (≥1200px) */
+@media (min-width: 1200px) {
+  .popup-form-box {
+    font-size: 1rem;
+    padding: 28px;
+  }
+
+  .popup-form-box h2 {
+    font-size: 1.5rem;
   }
 }

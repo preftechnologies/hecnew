@@ -2,63 +2,88 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("footer-container").innerHTML = `
     <style>
         .footer {
-            border-top: 1px solid #E2E8F0;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-            backdrop-filter: blur(6px);
-            background-color: #F7FAFC;
-            color: #2D3748;
-            padding: 25px 0;
-            text-align: left;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            padding: 40px 20px;
             font-family: 'Inter', sans-serif;
+            border-top: 1px solid #334155;
         }
+
         .footer .container {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
+            justify-content: space-between;
             max-width: 1200px;
             margin: auto;
+            gap: 30px;
         }
+
         .footer-column {
             flex: 1;
-            min-width: 200px;
-            padding: 10px;
+            min-width: 220px;
         }
+
         .footer-column h4 {
             font-size: 16px;
-            margin-bottom: 10px;
-            font-weight: bold;
-            color: #2B6CB0;
+            color: #38bdf8;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
-        .footer-column p, .footer-column a {
-            font-size: 13px;
-            color: #2D3748;
+
+        .footer-column p,
+        .footer-column a {
+            font-size: 14px;
+            color: #cbd5e1;
             text-decoration: none;
+            margin-bottom: 8px;
             display: block;
-            margin-bottom: 6px;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
+
         .footer-column a:hover {
-            color: #38B2AC;
+            color: #38bdf8;
         }
+
         .social-icons {
             display: flex;
-            gap: 10px;
+            gap: 12px;
             margin-top: 10px;
         }
+
         .social-icons a {
-            color: #2B6CB0;
-            font-size: 18px;
-            transition: 0.3s;
+            color: #38bdf8;
+            font-size: 20px;
+            transition: transform 0.3s;
         }
+
         .social-icons a:hover {
-            color: #38B2AC;
+            transform: scale(1.2);
         }
+
         .footer-bottom {
             text-align: center;
-            margin-top: 15px;
+            margin-top: 30px;
             font-size: 13px;
-            color: #718096;
+            color: #94a3b8;
         }
+
+        .footer-disclaimer {
+            text-align: center;
+            font-size: 13px;
+            color: #f1f5f9;
+            margin-top: 10px;
+        }
+
+        .footer-disclaimer a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-disclaimer a:hover {
+            text-decoration: underline;
+        }
+
         .floating-container {
             position: fixed;
             bottom: 20px;
@@ -69,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             z-index: 1000;
             align-items: center;
         }
+
         .whatsapp-container {
             display: flex;
             align-items: center;
@@ -83,12 +109,15 @@ document.addEventListener("DOMContentLoaded", function () {
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             transition: background 0.3s;
         }
+
         .whatsapp-container:hover {
             background: #1EBE5D;
         }
+
         .whatsapp-container i {
             font-size: 20px;
         }
+
         .scroll-buttons {
             position: fixed;
             top: 50%;
@@ -99,8 +128,9 @@ document.addEventListener("DOMContentLoaded", function () {
             gap: 10px;
             z-index: 1000;
         }
+
         .scroll-btn {
-            background-color: #2B6CB0;
+            background-color: #2563eb;
             color: white;
             border: none;
             padding: 12px;
@@ -115,16 +145,19 @@ document.addEventListener("DOMContentLoaded", function () {
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             transition: background-color 0.3s;
         }
+
         .scroll-btn:hover {
-            background-color: #38B2AC;
+            background-color: #1e40af;
         }
+
         @media (max-width: 768px) {
             .footer .container {
                 flex-direction: column;
                 text-align: center;
             }
+
             .footer-column {
-                margin-bottom: 15px;
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -132,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <footer class="footer">
         <div class="container">
             <div class="footer-column">
-                <img src="/hecnew/images/logoHHH.png" alt="HEC Logo" style="width: 120px; margin-bottom: 10px;">
+                <img src="/hecnew/images/logoHHH.png" alt="HEC Logo" style="width: 120px; margin-bottom: 15px;">
                 <p>HEC is a premier education consultancy, guiding students in pursuing higher education abroad with expert assistance and a trusted network.</p>
                 <div class="social-icons">
                     <a href="#"><i class="bi bi-facebook"></i></a>
@@ -170,6 +203,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a href="/hecnew/index.html">Home</a>
             </div>
         </div>
+
+        <div class="footer-disclaimer">
+            In partnership with <a href="https://he-direct.com" target="_blank">he-direct.com</a>
+        </div>
         <div class="footer-bottom">© 2025 HEC Website. All Rights Reserved.</div>
     </footer>
     `;
@@ -191,6 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("scrollToTop").addEventListener("click", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
+
     document.getElementById("scrollToBottom").addEventListener("click", function () {
         window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
     });

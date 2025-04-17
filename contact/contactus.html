@@ -28,34 +28,32 @@
         <h1>Get in Touch with Us</h1>
         <p>We are here to assist you with all your higher education queries. Reach out to us for guidance on study destinations, scholarships, applications, and more.</p>
     </section>
-<!-- Contact Form Section -->
 
-<section class="contact-form" id="contact-form">
-    <h2>We’re Here to Help</h2>
+    <div class="form-heading">
+        <h2>We're Here to Help</h2>
+      </div>
+      
     <form id="contactForm">
-        <div class="form-group">
-            <input type="text" name="contactName" placeholder="Full Name*" required>
-            <input type="email" name="contactEmail" placeholder="Email Address*" required>
+        <div class="form-columns">
+          <input type="text" name="contactName" placeholder="Full Name*" required>
+          <input type="email" name="contactEmail" placeholder="Email Address*" required>
+          
+          <input type="tel" name="contactMobile" placeholder="Phone Number*" required>
+          <select name="contactSubject" required>
+            <option value="" disabled selected>Type of Inquiry*</option>
+            <option value="admission">Admission Guidance</option>
+            <option value="recruitment">Become a Recruiter</option>
+            <option value="partnership">Institutional Partnership</option>
+            <option value="event">Events / Webinars</option>
+            <option value="general">General Inquiry</option>
+          </select>
+      
+          <textarea name="contactMessage" placeholder="Please write your message..." required></textarea>
+      
+          <button type="submit" class="register-btn" id="submitContact">Send Message</button>
         </div>
-        <div class="form-group">
-            <input type="tel" name="contactMobile" placeholder="Phone Number*" required>
-            <select name="contactSubject" required>
-                <option value="" disabled selected>Type of Inquiry*</option>
-                <option value="admission">Admission Guidance</option>
-                <option value="recruitment">Become a Recruiter</option>
-                <option value="partnership">Institutional Partnership</option>
-                <option value="event">Events / Webinars</option>
-                <option value="general">General Inquiry</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <textarea name="contactMessage" placeholder="Please write your message..." rows="5" required style="width: 100%; padding: 14px; font-size: 16px; border: 1px solid var(--border-color); border-radius: var(--border-radius);"></textarea>
-        </div>
-        <button type="submit" class="register-btn" id="submitContact">Send Message</button>
-    </form>
-</section>
-
-
+      </form>
+      
     <!-- Offices Section -->
     <section class="offices">
         <h2>Our Offices in Pakistan</h2>

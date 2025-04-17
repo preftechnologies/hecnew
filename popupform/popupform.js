@@ -1,7 +1,7 @@
 // Use a timer variable so we can cancel it if needed
 let popupTimer = null;
 
-// Show the popup after 3 seconds if it hasn't been closed/submitted
+// Show the popup after 6 seconds if it hasn't been closed/submitted
 window.addEventListener('DOMContentLoaded', () => {
   popupTimer = setTimeout(() => {
     const popup = document.getElementById('popupContactForm');
@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
       // Use "flex" so the centered layout (from CSS flex) is applied
       popup.style.display = 'flex';
     }
-  }, 3000);
+  }, 4000);
 });
 
 // When closing the popup, clear the timer to prevent re-display

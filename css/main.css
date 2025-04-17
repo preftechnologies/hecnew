@@ -1,492 +1,571 @@
-
-                    /* Latest News Section */
-                    .latest-news {
-                      background: var(--bg-light);
-                      padding: 60px 20px;
-                      text-align: center;
-                  }
-                  
-
-.section-title {
-  font-size: 28px;
-  font-weight: bold;
-  color: var(--primary-color);
-  margin-bottom: 30px;
-}
-
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.news-item {
-  background: var(--bg-light);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  border-left: 5px solid var(--primary-color);
-  position: relative;
-  overflow: hidden;
-}
-
-.news-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  border-left: 5px solid var(--secondary-color);
-}
-
-.news-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--text-light);
-  margin-bottom: 10px;
-}
-
-.news-description {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin-bottom: 15px;
-}
-
-.news-date {
-  font-size: 12px;
-  color: var(--text-muted);
-}
-
-
-
-/* INFO BOXES SECTION */
+/* ======================================
+   Global Styles & Resets
+====================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #F9FAFB; /* Light background */
+    color: #2D3748;      /* Dark text */
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* ======================================
+     Latest News Section
+  ====================================== */
+  .latest-news {
+    background: #F9FAFB;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2B6CB0;  /* Primary deep blue */
+    margin-bottom: 30px;
+  }
+  
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .news-item {
+    background: #F9FAFB;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border-left: 5px solid #2B6CB0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-left-color: #38B2AC;
+  }
+  
+  .news-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1A202C;
+    margin-bottom: 10px;
+  }
+  
+  .news-description {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 15px;
+  }
+  
+  .news-date {
+    font-size: 12px;
+    color: #718096;
+  }
+  
+ /* ======================================
+   Info Boxes Section – Modern & Professional
+====================================== */
 .info-boxes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Title for Info Boxes */
-.info-title {
-  grid-column: 1 / -1; /* Make title span across the whole section */
-  font-size: 32px;
-  font-weight: bold;
-  color: var(--primary-color);
-  text-align: center;
-  margin-bottom: 20px;
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeIn 1s ease-out forwards;
-}
-
-/* Individual Info Box */
-.info-boxes .box {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: var(--text-light);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  min-width: 250px;
-  max-width: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Center-align text */
-.info-boxes .box h3 {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.info-boxes .box p {
-  font-size: 16px;
-  line-height: 1.4;
-}
-
-/* Hover Effect */
-.info-boxes .box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .info-boxes {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
   }
-}
-
-@media (max-width: 768px) {
-  .info-boxes {
-    grid-template-columns: 1fr;
+  
+  .info-title {
+    grid-column: 1 / -1;
+    font-size: 32px;
+    font-weight: bold;
+    color: #d81b60; /* Deep pink for title */
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s ease-out forwards;
   }
-}
-/* ========== PARTNERS SECTION ========== */
+  
+  .info-boxes .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffccd5, khaki); /* Light pink gradient */
+    color: #2D3748; /* Dark gray text for readability */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    height: 250px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .info-boxes .box h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .info-boxes .box p {
+    font-size: 16px;
+    line-height: 1.4;
+    /* Using standard properties for text overflow; -webkit-line-clamp is removed for broader compatibility */
+    overflow: hidden;
+  }
+  
+  .info-boxes .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Media Queries for Info Boxes */
+  @media (max-width: 992px) {
+    .info-boxes {
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .info-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Keyframe for fadeIn Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }/* ======================================
+   Partners Section – Modern, Professional
+====================================== */
 .partners-section {
-  padding: 60px 20px;
-  background: var(--bg-light); /* Light background for a clean and professional look */
-  text-align: center;
-}
-
-/* ========== SECTION HEADING ========== */
-.partners-section h2 {
-  font-size: 32px;
-  color: var(--primary-color);
-  font-weight: bold;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  position: relative;
-}
-
-/* ========== PARTNER CONTAINER ========== */
-.partners {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap; /* Allows responsiveness */
-  align-items: stretch; /* Ensures equal height blocks */
-}
-
-/* ========== PARTNER BOXES ========== */
-.partner-box {
-  background: var(--text-light);
-  border-radius: 12px;
-  padding: 20px;
-  width: 100%;
-  max-width: 350px; /* Ensures uniform width */
-  text-align: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 450px; /* ✅ FIXED HEIGHT for uniformity */
-}
-
-/* ========== PARTNER BOX HOVER EFFECT ========== */
-.partner-box:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* ========== PARTNER IMAGES ========== */
-.partner-box img {
-  width: 100%;
-  border-radius: 8px;
-  height: 200px;
-  object-fit: cover; /* Ensures proper image display */
-}
-
-/* ========== PARTNER BOX TITLE ========== */
-.partner-box h3 {
-  font-size: 22px;
-  color: var(--primary-color);
-  margin: 15px 0 10px;
-  font-weight: bold;
-}
-
-/* ========== PARTNER BOX DESCRIPTION ========== */
-.partner-box p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.5;
-  padding: 0 10px;
-  flex-grow: 1; /* ✅ Allows text to take available space */
-  overflow: hidden; /* ✅ Prevents text from pushing the button */
-  display: -webkit-box;
-  -webkit-line-clamp: 4; /* ✅ Limits text to 4 lines */
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-}
-
-/* ========== KNOW MORE BUTTON ========== */
-.know-more {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--text-light);
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  border-radius: 30px;
-  text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  align-self: center; /* ✅ Centers button */
-  margin-top: auto; /* ✅ Pushes button to the bottom */
-}
-
-/* Hover effect */
-.know-more:hover {
-  transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-
-/* ========== NAVIGATION ARROWS ========== */
-.navigation-arrows {
-  display: flex;
-  gap: 10px;
-}
-
-/* Arrow button styles */
-.arrow {
-  background: var(--primary-color);
-  color: var(--text-light);
-  font-size: 18px;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-/* Arrow hover effect */
-.arrow:hover {
-  background: var(--secondary-color);
-  transform: scale(1.1);
-}
-
-/* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 768px) {
+    padding: 60px 20px;
+    background: lightgray;  /* Light neutral background */
+    text-align: center;
+  }
+  
+  .partners-section h2 {
+    font-size: 32px;
+    color: #1F2937;  /* Dark blue/gray for heading */
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
   .partners {
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
   }
-
-  .partners-header {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .navigation-arrows {
-      margin-top: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .partners-section {
-      padding: 40px 15px;
-  }
-
+  
   .partner-box {
-      max-width: 90%;
+    background: lightgray;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
   }
-
-  .header-left h2 {
-      font-size: 24px;
+  
+  .partner-box:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
   }
-
+  
+  .partner-box img {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .partner-box h3 {
+    font-size: 22px;
+    color: #1F2937;  /* Dark blue/gray for titles */
+    margin: 15px 0 10px;
+    font-weight: bold;
+  }
+  
+  .partner-box p {
+    font-size: 16px;
+    color: #4B5563;  /* Medium gray for text */
+    line-height: 1.5;
+    padding: 0 10px;
+    flex-grow: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+  
+  .know-more {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    /* Gradient from navy blue to a lighter blue */
+    background: linear-gradient(135deg, #2563EB, #3B82F6);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-self: center;
+    margin-top: auto;
+  }
+  
+  .know-more:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Navigation Arrows */
+  .navigation-arrows {
+    display: flex;
+    gap: 10px;
+  }
+  
   .arrow {
-      font-size: 16px;
-      padding: 8px 12px;
+    background: #2563EB;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
   }
-}
-                                       /* ========== UNIVERSITY PARTNERS SECTION ========== */
-
-                                      
-.partners-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.header-left h2 {
-  font-size: 28px;
-  color: var(--primary-color);
-  font-weight: bold;
-}
-
-.partners-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 20px;
-  background: var(--bg-dark); /* Clean light background */
-  text-align: center;
-}
-
-/* ========== INDIVIDUAL PARTNER BOX ========== */
-.partner {
-  background: var(--text-light);
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Hover effect */
-.partner:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* ========== UNIVERSITY LOGO STYLING ========== */
-.partner img {
-  width: 100%;
-  max-width: 140px; /* Ensures logos are uniform */
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
-}
-
-/* Logo hover effect */
-.partner:hover img {
-  transform: scale(1.1);
-}
-
-/* ========== UNIVERSITY NAME STYLING ========== */
-.partner p {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--primary-color);
-  margin: 5px 0 0;
-}
-
-/* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 768px) {
+  
+  .arrow:hover {
+    background: #3B82F6;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design for Partners Section */
+  @media (max-width: 768px) {
+    .partners {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .partners-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navigation-arrows {
+        margin-top: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .partners-section {
+        padding: 40px 15px;
+    }
+    
+    .partner-box {
+        max-width: 90%;
+    }
+    
+    .header-left h2 {
+        font-size: 24px;
+    }
+    
+    .arrow {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+  }
+  
+  /* ======================================
+     University Partners Section
+  ====================================== */
+  .partners-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .header-left h2 {
+    font-size: 28px;
+    color: #2B6CB0;
+    font-weight: bold;
+  }
+  
   .partners-list {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: #1A202C; /* Dark background */
+    text-align: center;
   }
-}
-
-@media (max-width: 480px) {
-  .partners-list {
-      grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
-      gap: 15px;
+  
+  .partner {
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-
+  
+  .partner:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
   .partner img {
+    width: 100%;
+    max-width: 140px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .partner:hover img {
+    transform: scale(1.1);
+  }
+  
+  .partner p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2B6CB0;
+    margin: 5px 0 0;
+  }
+  
+  /* Responsive Adjustments for University Partners */
+  @media (max-width: 768px) {
+    .partners-list {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .partners-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    .partner img {
       max-width: 120px;
       height: 70px;
-  }
-
-  .partner p {
+    }
+    .partner p {
       font-size: 14px;
+    }
   }
-}
-
-  /* ========== Video Gallery Section ========== */
-.video-gallery {
-  background: var(--bg-light); /* Dark Gradient Background */
-  padding: 60px 0;
-  color: var(--text-light);
-}
-
-/* Section Title */
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--bg-dark);
-  margin-bottom: 10px;
-}
-
-.section-subtitle {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: var(--bg-dark);
-  margin-bottom: 40px;
-}
-
-/* Video Cards - Container */
-.video-gallery-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  align-items: stretch; /* Ensures all cards align properly */
-}
-
-/* Video Cards */
-.video-item {
-  background: #242F40;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 350px; /* Uniform width */
-  height: 450px; /* ✅ Fixed height for uniformity */
-}
-
-.video-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
-}
-
-/* Video Styling */
-.video-container {
-  position: relative;
-  overflow: hidden;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-.video-container video {
-  width: 100%;
-  height: 200px; /* ✅ Fixed height to prevent uneven sizes */
-  object-fit: cover;
-}
-
-/* Card Body Styling */
-.card-body {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
-}
-
-.card-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--text-light);
-}
-
-.card-text {
-  font-size: 1rem;
-  color: #d1d1d1;
-  flex-grow: 1; /* ✅ Allows text to adjust within fixed card height */
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* ✅ Limits text to 3 lines */
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-}
   
-
- 
-/* =========================
-   Hero Section Styles
-   ========================= */
-   .hero-slider {
+  /* ======================================
+   Modern & Professional Video Gallery Section
+====================================== */
+.video-gallery {
+    background: silver; /* Deep navy background for sleek feel */
+    padding: 80px 20px;
+    color: #e2e8f0;
+    text-align: center;
+  }
+  
+  .video-gallery .section-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: seagreen;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  
+  .video-gallery .section-subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 50px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .video-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: stretch; /* Force all grid items to stretch equally */
+  }
+  
+  /* Individual video card */
+  .video-item {
+    background: linear-gradient(145deg, #1f2937, #2d3748);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    height: 100%; /* Ensure equal height within grid */
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Video container */
+  .video-container {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    aspect-ratio: 16 / 9; /* Ensure consistent video aspect */
+  }
+  
+  /* Card Body */
+  .card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;             /* Allow text section to stretch */
+    justify-content: space-between; /* Spread content evenly */
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #374151;
+  }
+  
+  /* Content area */
+  .card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    color: #d1d5db;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+  
+  /* View Button */
+  .video-item a.view-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    align-self: flex-start;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .video-item a.view-button:hover {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    transform: translateY(-1px);
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .video-gallery {
+      padding: 60px 15px;
+    }
+  
+    .video-gallery .section-title {
+      font-size: 2.2rem;
+    }
+  
+    .video-gallery .section-subtitle {
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
+  
+    .video-gallery-container {
+      gap: 20px;
+    }
+  }
+  
+/* ======================================
+   Hero Section – Dark Theme Enhanced
+====================================== */
+.hero-slider {
     position: relative;
     height: 90vh;
     overflow: hidden;
-    margin-top: 0; /* ✅ No gap at top */
+    margin-top: 0;
+    border-bottom: 4px solid #1e293b; /* subtle border */
+    background: linear-gradient(to bottom, #0f172a, #1e293b);
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   }
-  
   
   .hero-slide {
     position: absolute;
@@ -497,16 +576,27 @@
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transform: scale(1);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+    border-radius: 12px;
+    overflow: hidden;
   }
   
   .hero-slide.active {
     opacity: 1;
     z-index: 1;
+    transform: scale(1.05);
+    animation: zoomPulse 10s ease-in-out infinite;
   }
   
+  @keyframes zoomPulse {
+    0%, 100% { transform: scale(1.05); }
+    50% { transform: scale(1); }
+  }
+  
+  /* Updated darker overlay for better contrast */
   .overlay {
-    background-color: rgba(255, 255, 255, 0.6);
+    background: rgba(15, 23, 42, 0.65);  /* transparent dark blue */
     position: absolute;
     width: 100%;
     height: 100%;
@@ -515,25 +605,87 @@
     z-index: 2;
   }
   
+  /* Content Area */
   .hero-content {
     position: relative;
     z-index: 3;
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--text-heading);
+    color: #f8fafc;  /* very light text for dark bg */
     padding: 0 20px;
   }
   
   .hero-content h1 {
+    color: white;
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 1rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   }
   
   .hero-content p {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
+    color: #cbd5e1;
   }
   
- 
+  /* Button Styling (optional) */
+  .hero-content a.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .hero-content a.btn:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Navigation Dots */
+  .hero-nav {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 8px 16px;
+    border-radius: 30px;
+    backdrop-filter: blur(6px);
+  }
+  
+  .hero-nav span {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #94a3b8;
+  }
+  
+  .hero-nav span.active {
+    background: #38bdf8;
+    border-color: #38bdf8;
+  }
+  
+  /* ======================================
+     Animation: Fade In
+  ====================================== */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

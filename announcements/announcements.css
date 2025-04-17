@@ -1,107 +1,111 @@
-/* 🚨 Announcement Banner Styles */
+/* ======================================
+   Professional Announcement Banner & Cards – HEC Website
+====================================== */
 
+/* Announcement Banner */
 .announcement-banner {
-    width: 100%;
-    background-color: #f56565; /* Red */
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 99;
-    position: relative;
-  }
-  
-  .announcement-content {
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll-left 10s linear infinite;
-    display: flex;
-    align-items: center;
-  }
-  
-  .announcement-text {
-    font-size: 18px;
-    color: #fff;
-    font-weight: 600;
-    padding-right: 20px;
-  }
-  
-  .apply-btn {
-    font-size: 14px;
-    font-weight: 600;
-    padding: 6px 12px;
-    background-color: #fff;
-    color: #f56565;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  
-  .apply-btn:hover {
-    background-color: #fed7d7;
-    color: #c53030;
-  }
-  
-  /* Scrolling Animation */
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
-  /* Blinking effect */
-  .blinking {
-    animation: blinkingText 1.5s infinite;
-  }
-  
-  @keyframes blinkingText {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
-  
-
-
-  /* 📦 Announcement Cards Section */
-
-.announcement-blocks {
-  background-color: #f8f9fa;
+  width: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 12px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 99;
+  position: relative;
 }
 
+.announcement-content {
+  display: flex;
+  align-items: center;
+  animation: scroll-left 10s linear infinite;
+  padding-left: 100%;
+}
+
+.announcement-text {
+  font-size: 1.125rem;
+  color: var(--text-inverted);
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+.apply-btn {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  background-color: var(--bg-secondary);
+  color: var(--danger-color);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all var(--transition-speed) ease;
+}
+
+.apply-btn:hover {
+  background-color: #fed7d7;
+  color: #c53030;
+}
+
+/* Scrolling Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Optional Blinking Effect */
+.blinking {
+  animation: blinkingText 1.5s infinite;
+}
+
+@keyframes blinkingText {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Announcement Cards Section */
+.announcement-blocks {
+  background-color: var(--bg-light);
+  padding: 40px 20px;
+}
+
+/* Each Announcement Card */
 .announcement-card {
-  background: #ffffff;
+  background: lightgreen;
   padding: 25px;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  border-left: 5px solid #2B6CB0;
-  transition: transform 0.3s ease;
+  border-left: 5px solid var(--primary-color);
+  transition: transform var(--transition-speed) ease;
   animation: pop-in 1s ease both;
   height: 100%;
 }
 
+/* Card Heading */
 .announcement-card h5 {
-  color: #2B6CB0;
-  font-size: 18px;
+  color: var(--primary-color);
+  font-size: 1.125rem;
   margin-bottom: 10px;
-  animation: blinkingText 1.5s infinite;
 }
 
+/* Card Paragraph */
 .announcement-card p {
-  font-size: 14px;
-  color: #333;
+  font-size: 0.875rem;
+  color: var(--text-body);
   margin-bottom: 15px;
 }
 
+/* Card Button */
 .announcement-card .btn {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   padding: 6px 14px;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
 }
 
-/* Pop Animation */
+/* Pop-in Animation for Cards */
 @keyframes pop-in {
   0% { opacity: 0; transform: scale(0.9); }
   100% { opacity: 1; transform: scale(1); }

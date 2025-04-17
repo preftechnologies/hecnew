@@ -1,48 +1,50 @@
-
-// Open Popup
-document.getElementById("openPopup").addEventListener("click", function () {
-    document.getElementById("appointmentPopup").classList.add("active");
-});
-
-// Close Popup
-function closePopup() {
-    document.getElementById("appointmentPopup").classList.remove("active");
-}
-
-// Close the popup when clicking outside the form
-window.onclick = function (event) {
-    let popup = document.getElementById("appointmentPopup");
-    if (event.target === popup) {
-        closePopup();
-    }
-};
-
-// Handle Form Submission
-document.getElementById("appointmentForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent page reload
-
-    let formData = new FormData(this);
-    const submitBtn = document.getElementById("submitAppointment");
-    const originalText = submitBtn.innerHTML;
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...`;
-
-    fetch("../submit_appointment.php", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert(data);
-        closePopup();
-        document.getElementById("appointmentForm").reset();
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("Something went wrong. Please try again.");
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
+// students.js
+document.addEventListener("DOMContentLoaded", () => {
+    const popup     = document.getElementById("studentPopupForm");
+    const closeBtn  = document.getElementById("closeStudentForm");
+    const form      = document.getElementById("studentForm");
+    const submitBtn = document.getElementById("submitStudent");
+  
+    // Open popup on all matching buttons
+    document.querySelectorAll(".openStudentForm").forEach(btn =>
+      btn.addEventListener("click", () => {
+        popup.style.display = "flex";
+      })
+    );
+  
+    // Close popup
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
     });
-});
+  
+    // Close when clicking outside
+    window.addEventListener("click", e => {
+      if (e.target === popup) popup.style.display = "none";
+    });
+  
+    // Handle form submit
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...`;
+  
+      try {
+        const res  = await fetch("../submit_appointment.php", {
+          method: "POST",
+          body: new FormData(form)
+        });
+        const text = await res.text();
+        alert(text);
+        popup.style.display = "none";
+        form.reset();
+      } catch (err) {
+        console.error("Submission error:", err);
+        alert("Something went wrong. Please try again.");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
+    });
+  });
+  
