@@ -200,64 +200,18 @@
       </div>
     </div>
   </section>
-  <!-- videos gallery Section -->
+ <!-- videos gallery Section -->
+<section class="video-gallery">
+  <h2 class="section-title">🎬 Success Stories</h2>
+  <p class="section-subtitle">
+    Hear from students who successfully studied abroad through our services.
+  </p>
 
-  <section class="video-gallery">
-      <h2 class="section-title">🎬 Success Stories</h2>
-      <p class="section-subtitle">Hear from students who successfully studied abroad through our services.
-      </p>
+  <div class="row" id="videoGallery">
+    <!-- Videos will be dynamically loaded here via load_video.js -->
+  </div>
+</section>
 
-      <div class="row">
-        <!-- Video 1 -->
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-          <div class="card video-item">
-            <div class="video-container">
-              <video width="100%" height="200" controls>
-                <source src="videos/sample1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="card-body text-center">
-              <h5 class="card-title">Student Success Story</h5>
-              <p class="card-text">Experience inspiring journeys of students who achieved their dreams.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Video 2 -->
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-          <div class="card video-item">
-            <div class="video-container">
-              <video width="100%" height="200" controls>
-                <source src="video/sample2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="card-body text-center">
-              <h5 class="card-title">A Life-Changing Experience</h5>
-              <p class="card-text">Discover the impact of international education on students’ lives.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Video 3 -->
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-          <div class="card video-item">
-            <div class="video-container">
-              <video width="100%" height="200" controls>
-                <source src="video/sample3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="card-body text-center">
-              <h5 class="card-title">Global Learning Stories</h5>
-              <p class="card-text">See how students adapted and thrived in different countries.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-  </section>
 
   <!-- Footer file connection -->
   <div id="footer-container"></div>
@@ -275,30 +229,60 @@
   <script src="js/hero.js"></script>
   <script src="announcements/announcements.js"></script>
   <script src="popupform/popupform.js"></script>
+  <script src="videos/load_video.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
 
   <!-- Popup Form Loader -->
   <link rel="stylesheet" href="popupform/popupform.css" />
   <div id="popupContainer"></div>
   <script>
-    fetch('popupform/popupform.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('popupContainer').innerHTML = html;
-  
-        // Now safely attach event listeners
-        const form = document.getElementById('popupForm');
-        const submitBtn = document.getElementById('popupSubmit');
-  
-        if (form) {
-          form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            console.log("Form submission started");
-            // You can add the rest of your form submission logic here
-          });
-        }
+
+fetch('popupform/popupform.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('popupContainer').innerHTML = html;
+
+    // ✅ Hide popup immediately after inserting
+    const popup = document.getElementById('popupContactForm');
+    if (popup) popup.style.display = 'none';
+
+    // ✅ Delay the popup to appear after 5 seconds
+    setTimeout(() => {
+      if (popup) popup.style.display = 'flex';
+    }, 5000); // 5000ms = 5 seconds
+
+    // ✅ Attach submit functionality
+    const form = document.getElementById('popupForm');
+    const submitBtn = document.getElementById('popupSubmit');
+
+    if (form && submitBtn) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = "Sending...";
+
+        fetch("/hecnew/submit_contactus.php", {
+          method: "POST",
+          body: new FormData(form)
+        })
+        .then(res => res.text())
+        .then(data => {
+          alert(data);
+          form.reset();
+          popup.style.display = "none";
+        })
+        .catch(() => alert("Something went wrong"))
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        });
       });
-  </script>
+    }
+  });
+</script>
+
   
 </body>
 

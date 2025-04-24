@@ -1,109 +1,114 @@
-/* Stylish Popup Form for Professional & Modern Look */
 
-/* Overlay: Full screen, flex centered, with slight padding */
+/* ==========================================
+   Popup Form Styling – Dark Theme (per screenshot)
+========================================== */
+
+/* Overlay: centers form, dimmed background */
 .popup-form-overlay {
   display: none; /* hidden by default */
   position: fixed;
-  z-index: 10000;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 20px;
+  z-index: 10000;
 }
 
-/* Popup container with new gradient background */
+/* Popup container: gradient dark background, rounded */
 .popup-form-box {
   position: relative;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f8fafc;
+  padding: 32px 28px;
+  border-radius: 16px;
   width: 100%;
-  max-width: 500px;
-  padding: 20px;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 0.4s ease-in-out;
-  /* New stylish gradient background */
-  background: linear-gradient(135deg, #e0efff 0%, #cff7f1 100%);
-  font-size: 0.9rem;
-  line-height: 1.4;
+  max-width: 550px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  animation: zoomIn 0.4s ease-out both;
+  font-family: 'Inter', sans-serif;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
-/* Popup header */
+/* Heading */
 .popup-form-box h2 {
-  margin-bottom: 16px;
-  font-size: 1.3rem;
   text-align: center;
-  /* Use brand primary color for contrast */
-  color: #2B6CB0;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  font-weight: 700;
+  color: #38bdf8;
 }
 
-/* Form groups arranged in two columns to reduce vertical space */
-.popup-form-box .form-group {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
-}
+/* No labels in HTML; placeholders on inputs serve as labels */
 
-/* Each field takes half the width in a two-item row */
-.popup-form-box .form-group > * {
-  flex: 1;
-}
-
-/* Inputs, selects, textareas style */
+/* Input & Textarea Fields */
 .popup-form-box input,
 .popup-form-box select,
 .popup-form-box textarea {
   width: 100%;
-  padding: 12px;
-  font-size: 0.9rem;
-  border: 1px solid #cbd5e0; /* subtle border */
-  border-radius: var(--border-radius);
-  background: #ffffff; /* white background for clarity */
-  color: var(--text-body);
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
 .popup-form-box input:focus,
 .popup-form-box select:focus,
 .popup-form-box textarea:focus {
-  border-color: #2B6CB0;
+  border-color: #38bdf8;
   outline: none;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
 }
 
-/* Stylish gradient submit button using brand colors */
+/* Submit Button */
 .register-btn {
-  background: linear-gradient(45deg, #38B2AC, #2B6CB0);
-  color: var(--text-inverted);
-  padding: 12px;
-  border: none;
-  font-size: 1rem;
   width: 100%;
-  border-radius: var(--border-radius);
+  padding: 14px;
+  font-size: 1rem;
   font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #2563eb, #38b2ac);
+  color: #ffffff;
   cursor: pointer;
-  transition: transform var(--transition-speed), background var(--transition-speed);
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .register-btn:hover {
-  transform: scale(1.03);
+  transform: translateY(-1px);
+  background: linear-gradient(45deg, #1d4ed8, #0ea5e9);
 }
 
-/* Close button in the top-right corner */
+/* Close Button */
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
+  top: 12px;
+  right: 16px;
+  font-size: 1.4rem;
+  color: #f8fafc;
   cursor: pointer;
-  color: var(--text-muted);
+  transition: color 0.2s ease;
 }
 
-/* Fade in animation */
-@keyframes fadeIn {
+.close-btn:hover {
+  color: #f6ad55;
+}
+
+/* Animation */
+@keyframes zoomIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.92);
   }
   to {
     opacity: 1;
@@ -111,9 +116,7 @@
   }
 }
 
-/* Responsive adjustments */
-
-/* For shorter viewports (under ~700px height), allow minimal scrolling if absolutely needed */
+/* Responsive */
 @media (max-height: 700px) {
   .popup-form-box {
     max-height: 90vh;
@@ -121,26 +124,17 @@
   }
 }
 
-/* For tablets and larger screens (≥768px) */
 @media (min-width: 768px) {
   .popup-form-box {
-    padding: 24px;
-    font-size: 0.95rem;
+    padding: 36px 32px;
   }
-
   .popup-form-box h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 
-/* For desktops or large screens (≥1200px) */
 @media (min-width: 1200px) {
-  .popup-form-box {
-    font-size: 1rem;
-    padding: 28px;
-  }
-
   .popup-form-box h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }

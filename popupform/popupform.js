@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
       // Use "flex" so the centered layout (from CSS flex) is applied
       popup.style.display = 'flex';
     }
-  }, 4000);
+  }, 7000);
 });
 
 // When closing the popup, clear the timer to prevent re-display

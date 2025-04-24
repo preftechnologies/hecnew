@@ -17,11 +17,13 @@ body {
 
 /* Hero Section */
 .py-5.bg-dark {
-    padding: 60px 20px !important;
-    background: linear-gradient(135deg, #2B6CB0, #38B2AC);
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    border-radius: 0 0 20px 20px;
+    text-align: center;
+    
+    background: linear-gradient(135deg, #48bb78, #f6ad55);
+    color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .py-5.bg-dark h1 {
