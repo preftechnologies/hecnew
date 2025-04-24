@@ -84,238 +84,236 @@
  /* ======================================
    Info Boxes Section – Modern & Professional
 ====================================== */
+
+/* Info boxes section */
 .info-boxes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 60px 20px;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  display: flex;
+  justify-content: space-around;
+  padding: 18px 17px; 
+  position: relative;
+  margin-top: -18px; 
+  z-index: 1;
+}
+
+.info-boxes .box {
+  background-color: #3865b2c7; /* Box background color */
+  border-radius: 10px;
+  padding: 17px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced box shadow */
+  width: 22%;
+  margin: 0 10px;
+  color: #efd0ca; /* Text color */
+  opacity: 0; /* Initial state for animation */
+  transform: translateY(20px); /* Initial state for animation */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.info-boxes .box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info-boxes .box:nth-child(1) {
+  transition-delay: 0.5s;
+}
+
+.info-boxes .box:nth-child(2) {
+  transition-delay: 1s;
+}
+
+.info-boxes .box:nth-child(3) {
+  transition-delay: 1.5s;
+}
+
+.info-boxes .box:nth-child(4) {
+  transition-delay: 2s;
+}
+
+.info-boxes .box h3 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+  color: #fff; 
+}
+
+.info-boxes .box p {
+  margin: 0;
+  color: #dee2e6; /* Text color */
+}
   
-  .info-title {
-    grid-column: 1 / -1;
-    font-size: 32px;
-    font-weight: bold;
-    color: #d81b60; /* Deep pink for title */
-    text-align: center;
-    margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeIn 1s ease-out forwards;
-  }
   
-  .info-boxes .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #ffccd5, khaki); /* Light pink gradient */
-    color: #2D3748; /* Dark gray text for readability */
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    height: 250px;
-    width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .info-boxes .box h3 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .info-boxes .box p {
-    font-size: 16px;
-    line-height: 1.4;
-    /* Using standard properties for text overflow; -webkit-line-clamp is removed for broader compatibility */
-    overflow: hidden;
-  }
-  
-  .info-boxes .box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Media Queries for Info Boxes */
-  @media (max-width: 992px) {
-    .info-boxes {
-      grid-template-columns: repeat(2, minmax(200px, 1fr));
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .info-boxes {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  /* Keyframe for fadeIn Animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }/* ======================================
+  /* ======================================
    Partners Section – Modern, Professional
 ====================================== */
 .partners-section {
-    padding: 60px 20px;
-    background: lightgray;  /* Light neutral background */
+    background-color: #f8f9fa; /* Background color */
     text-align: center;
+    margin: 0 24px; /* Ensure no margin above the section */
   }
   
-  .partners-section h2 {
-    font-size: 32px;
-    color: #1F2937;  /* Dark blue/gray for heading */
+  /* .partners-section h2 {
+    font-size: 2em;
+    color: #1F2937;  
     font-weight: bold;
-    margin-bottom: 30px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     position: relative;
+    line-height: 1.2;
+  } */
+
+  .partners-section h2 span {
+    color: #5c7457; /* Emphasis color */
   }
-  
   .partners {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content:  space-around;
     flex-wrap: wrap;
-    align-items: stretch;
   }
   
   .partner-box {
-    background: lightgray;
-    border-radius: 12px;
+    background-color: #fff; /* Box background color */
+    border-radius: 10px;
     padding: 20px;
-    width: 100%;
-    max-width: 350px;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced box shadow */
+    width: 28%; /* Reduced width to fit three boxes in a row */
+    margin: 10px;
+    color: #214e34; /* Text color */
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(20px); /* Initial state for animation */
+    transition: opacity 1s ease-out, transform 1s ease-out;
   }
   
-  .partner-box:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  .partner-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .partner-box:nth-child(1) {
+    transition-delay: 0.5s;
+  }
+  
+  .partner-box:nth-child(2) {
+    transition-delay: 1s;
+  }
+  
+  .partner-box:nth-child(3) {
+    transition-delay: 1.5s;
   }
   
   .partner-box img {
     width: 100%;
-    border-radius: 8px;
-    height: 200px;
-    object-fit: cover;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images are properly cropped */
+    border-radius: 10px;
   }
   
   .partner-box h3 {
-    font-size: 22px;
-    color: #1F2937;  /* Dark blue/gray for titles */
-    margin: 15px 0 10px;
-    font-weight: bold;
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #214e34; /* Heading color */
   }
   
   .partner-box p {
-    font-size: 16px;
-    color: #4B5563;  /* Medium gray for text */
-    line-height: 1.5;
-    padding: 0 10px;
-    flex-grow: 1;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
+    margin: 10px 0;
+    color: #214e34; /* Text color */
   }
   
-  .know-more {
+  .partner-box i {
+    font-size: 2em;
+    color: #5c7457; /* Icon color */
+    margin-bottom: 10px;
+  }
+  
+  .partner-box .know-more {
     display: inline-block;
+    margin-top: 10px;
     padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #FFFFFF;
-    /* Gradient from navy blue to a lighter blue */
-    background: linear-gradient(135deg, #2563EB, #3B82F6);
-    border-radius: 30px;
+    background-color: #0d6efd; /* Button background color */
+    color: #efd0ca; /* Button text color */
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    align-self: center;
-    margin-top: auto;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
   }
   
-  .know-more:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  .partner-box .know-more:hover {
+    background-color: #c1535b; /* Button hover background color */
   }
   
-  /* Navigation Arrows */
-  .navigation-arrows {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .arrow {
-    background: #2563EB;
-    color: #FFFFFF;
-    font-size: 18px;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background 0.3s ease, transform 0.3s ease;
-  }
-  
-  .arrow:hover {
-    background: #3B82F6;
-    transform: scale(1.1);
-  }
-  
-  /* Responsive Design for Partners Section */
+  /* Responsive styles */
   @media (max-width: 768px) {
+    header nav ul {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0; /* Reset margin for smaller screens */
+      margin-right: 0; /* Reset margin for smaller screens */
+    }
+  
+    header nav ul li {
+      margin: 5px 0;
+    }
+  
+    .hero {
+      height: 500px;
+    }
+  
+    .hero-content h1 {
+      font-size: 2em;
+    }
+  
+    .hero-content p {
+      font-size: 1em;
+    }
+  
+    .info-boxes {
+      flex-direction: column;
+      align-items: center;
+      margin-top: -100px; /* Adjust this value for smaller screens */
+    }
+  
+    .info-boxes .box {
+      width: 80%;
+      margin: 10px 0;
+    }
+  
     .partners {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-    
-    .partners-header {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .navigation-arrows {
-        margin-top: 15px;
+  
+    .partner-box {
+      width: 80%;
+      margin: 10px 0;
     }
   }
   
   @media (max-width: 480px) {
-    .partners-section {
-        padding: 40px 15px;
+    header nav ul {
+      display: none;
     }
-    
+  
+    header .sign-up {
+      padding: 5px 10px;
+      font-size: 0.8em;
+    }
+  
+    .hero-content h1 {
+      font-size: 1.5em;
+    }
+  
+    .hero-content p {
+      font-size: 0.8em;
+    }
+  
+    .info-boxes .box {
+      width: 90%;
+    }
+  
     .partner-box {
-        max-width: 90%;
-    }
-    
-    .header-left h2 {
-        font-size: 24px;
-    }
-    
-    .arrow {
-        font-size: 16px;
-        padding: 8px 12px;
+      width: 90%;
+      margin: 10px 0;
     }
   }
-  
   /* ======================================
      University Partners Section
   ====================================== */
@@ -323,26 +321,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    margin: 10px auto;
+    padding: 0px 41px;
   }
   
-  .header-left h2 {
+  /* .header-left h2 {
     font-size: 28px;
     color: #2B6CB0;
     font-weight: bold;
-  }
+  } */
   
   .partners-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
     justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-    background: #1A202C; /* Dark background */
+    padding: 15px 21px;
+    background: #ffffff; 
     text-align: center;
+    margin: 0 22px;
   }
   
   .partner {
@@ -407,10 +404,11 @@
    Modern & Professional Video Gallery Section
 ====================================== */
 .video-gallery {
-    background: silver; /* Deep navy background for sleek feel */
-    padding: 80px 20px;
+    background: #dee2e6;
+    padding: 10px 26px;
     color: #e2e8f0;
     text-align: center;
+    margin: 0 24px;
   }
   
   .video-gallery .section-title {

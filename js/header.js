@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="${homePath}">
-                <img src="/hecnew/images/logoAA.png" alt="HEC Logo">
+                <img src="/hecnew/images/logoHHH.png" alt="HEC Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
