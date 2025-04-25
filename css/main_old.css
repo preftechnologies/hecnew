@@ -686,21 +686,4 @@
       transform: translateY(0);
     }
   }
-
-/* ✅ Responsive Fix for Overlap Between Announcement and Info Boxes */
-@media (max-width: 768px) {
-  .info-boxes {
-    margin-top: 10px !important;  /* Removed negative margin */
-    z-index: 0 !important;
-  }
-}
-
-#announcement-container {
-  position: relative;
-  z-index: 10;
-  margin-bottom: 20px; /* Add spacing below announcement */
-}
-
-.hero-slider {
-  margin-bottom: 20px; /* Add spacing below hero section */
-}
+  
