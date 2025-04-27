@@ -1,45 +1,51 @@
-// Use a timer variable so we can cancel it if needed
-let popupTimer = null;
+// Prevent multiple declarations
+if (typeof popupTimer === 'undefined') {
+  let popupTimer = null;
+}
 
-// Show the popup after 6 seconds if it hasn't been closed/submitted
-window.addEventListener('DOMContentLoaded', () => {
+// All code inside a single DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Popup show after 7 seconds
   popupTimer = setTimeout(() => {
     const popup = document.getElementById('popupContactForm');
     if (popup) {
-      // Use "flex" so the centered layout (from CSS flex) is applied
       popup.style.display = 'flex';
     }
   }, 7000);
-});
 
-// When closing the popup, clear the timer to prevent re-display
-function closePopupForm() {
-  if (popupTimer) {
-    clearTimeout(popupTimer);
-    popupTimer = null;
-  }
-  document.getElementById('popupContactForm').style.display = 'none';
-}
+  // Close popup function
+  window.closePopupForm = function () {
+    if (popupTimer) {
+      clearTimeout(popupTimer);
+      popupTimer = null;
+    }
+    const popup = document.getElementById('popupContactForm');
+    if (popup) {
+      popup.style.display = 'none';
+    }
+  };
 
-document.addEventListener('DOMContentLoaded', () => {
+  // Attach submit event if form exists
   const form = document.getElementById('popupForm');
   const submitBtn = document.getElementById('popupSubmit');
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    console.log("Form submission started");
-    let formData = new FormData(form);
-    
-    // Disable the button and show the spinner
-    submitBtn.disabled = true;
-    let originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...`;
+  if (form && submitBtn) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      console.log("Form submission started");
 
-    // Use the existing absolute path to the PHP submit handler to match your contact page's implementation
-    fetch("/hecnew/submit_contactus.php", {
-      method: "POST",
-      body: formData
-    })
+      const formData = new FormData(form);
+
+      // Disable the button and show spinner
+      submitBtn.disabled = true;
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...`;
+
+      // Send data
+      fetch("/hecnew/submit_contactus.php", {
+        method: "POST",
+        body: formData
+      })
       .then(res => res.text())
       .then(data => {
         console.log("Form submission response:", data);
@@ -47,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
-        // Close the popup and cancel the timer if still active
         closePopupForm();
       })
       .catch(err => {
@@ -56,5 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
       });
-  });
+    });
+  }
 });

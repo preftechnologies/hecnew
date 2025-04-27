@@ -16,7 +16,7 @@ body {
   text-align: center;
   padding: 20px 20px 20px; /* Reduced top and bottom padding */
   background: linear-gradient(135deg, #48bb78, #f6ad55);
-  color: #ffffff;
+  color: green;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);

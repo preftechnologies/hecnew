@@ -89,10 +89,10 @@
 .info-boxes {
   display: flex;
   justify-content: space-around;
-  padding: 18px 17px; 
+  padding: 58px 17px; 
   position: relative;
-  margin-top: -18px; 
-  z-index: 1;
+  margin-top: -80px; 
+  z-index: 10;
 }
 
 .info-boxes .box {
@@ -414,7 +414,7 @@
   .video-gallery .section-title {
     font-size: 2.75rem;
     font-weight: 700;
-    color: seagreen;
+    color: #2563eb;
     margin-bottom: 15px;
     letter-spacing: 1px;
   }

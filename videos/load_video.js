@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("videos/get_video.php")
+    fetch("videos/get_video.php") 
       .then(res => res.json())
       .then(data => {
         const container = document.getElementById("videoGallery");
@@ -23,6 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           `;
         });
-      });
-  });
-  
+      })
+      .catch(err => console.error('Error loading videos:', err));
+});
