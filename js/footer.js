@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <footer class="footer">
         <div class="container">
             <div class="footer-column">
-                <img src="/hecnew/images/logoHHH.png" alt="HEC Logo" style="width: 120px; margin-bottom: 15px;">
+                <img src="/hecnew/images/logo666.png" alt="HEC Logo" style="width: 120px; margin-bottom: 15px;">
                 <p>HEC is a premier education consultancy, guiding students in pursuing higher education abroad with expert assistance and a trusted network.</p>
                 <div class="social-icons">
                     <a href="#"><i class="bi bi-facebook"></i></a>
