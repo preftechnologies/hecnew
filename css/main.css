@@ -140,8 +140,144 @@
   margin: 0;
   color: #dee2e6; /* Text color */
 }
+         /* HEC introduction section    */
+         
+/* ===== Centered HEC Hero Section ===== */
+.hec-centered-hero {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hec-centered-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hec-centered-heading {
+  margin-bottom: 50px;
+}
+
+.hec-main-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  margin: 0;
+  line-height: 1.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.hec-brackets {
+  color: #D4AF37;
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1;
+  margin-top: -10px;
+}
+
+.hec-sub-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin-top: 20px;
+}
+
+.hec-centered-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hec-centered-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 40px;
+}
+
+.hec-centered-text strong {
+  color: #1E3A8A;
+  font-weight: 600;
+  position: relative;
+}
+
+.hec-centered-text strong::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #D4AF37;
+}
+
+.hec-centered-cta {
+  margin-top: 50px;
+}
+
+.hec-cta-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  color: #1E3A8A;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.hec-cta-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #1E3A8A 0%, #3B82F6 100%);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(30, 58, 138, 0.3);
+}
+
+.hec-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hec-main-heading {
+      font-size: 2.5rem;
+      flex-direction: column;
+      gap: 5px;
+  }
   
+  .hec-brackets {
+      font-size: 3rem;
+      margin-top: 0;
+  }
   
+  .hec-sub-heading {
+      font-size: 1.5rem;
+  }
+  
+  .hec-centered-text {
+      font-size: 1.1rem;
+  }
+  
+  .hec-cta-text {
+      font-size: 1.1rem;
+  }
+  
+  .hec-cta-btn {
+      font-size: 1rem;
+      padding: 12px 30px;
+  }
+}
   /* ======================================
    Partners Section – Modern, Professional
 ====================================== */
@@ -151,7 +287,7 @@
     margin: 0 24px; /* Ensure no margin above the section */
   }
   
-  /* .partners-section h2 {
+   .partners-section h2 {
     font-size: 2em;
     color: #1F2937;  
     font-weight: bold;
@@ -159,7 +295,7 @@
     text-transform: uppercase;
     position: relative;
     line-height: 1.2;
-  } */
+  } 
 
   .partners-section h2 span {
     color: #5c7457; /* Emphasis color */
@@ -314,6 +450,114 @@
       margin: 10px 0;
     }
   }
+
+                /* study destinations section */
+/* ======================================
+   Study Destinations Section – Complete Styles
+====================================== */
+.study-destinations-section {
+  background: #edf2f7;
+  padding: 5rem 0;
+  position: relative;
+}
+
+.study-destinations-section::before {
+  content: "";
+  position: absolute;
+  top: -50px; right: -50px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(30,58,138,0.1) 0%, rgba(30,58,138,0) 70%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.study-destinations-section .container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.study-destinations-section h2,
+.study-destinations-section p.lead {
+  margin-bottom: 1.5rem;
+}
+
+.row.g-4 .col-lg-3 {
+  display: flex;
+}
+
+.destination-card {
+  background: #fff;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.destination-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+}
+
+.card-icon {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 1rem;
+  background-color: #ccc; /* fallback */
+}
+
+.card-icon i {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.card-icon::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px; height: 20px;
+  background: #fff;
+  z-index: 1;
+}
+
+/* Region colors */
+.bg-uk       { background-color: #2B6CB0; }
+.bg-europe   { background-color: #38B2AC; }
+.bg-america  { background-color: #48BB78; }
+.bg-oceania  { background-color: #ED8936; }
+
+.destination-card .card-body h3 {
+  margin-bottom: 0.5rem;
+}
+
+.destination-card .card-body p {
+  color: #4A5568; /* override text-muted */
+}
+
+.destination-card .card-footer a {
+  font-weight: 500;
+}
+
+.text-center.mt-5.pt-3 .btn {
+  padding: 14px 36px;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .study-destinations-section {
+    padding: 3rem 1rem;
+  }
+}
+
+/* Rest of your existing card styles... */
+
   /* ======================================
      University Partners Section
   ====================================== */
@@ -704,3 +948,4 @@
 .hero-slider {
   margin-bottom: 20px; /* Add spacing below hero section */
 }
+

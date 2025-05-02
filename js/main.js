@@ -153,4 +153,8 @@ document.addEventListener("DOMContentLoaded", function () {
 //       });
 //   });
   
-  
+  // Initialize AOS animation library
+AOS.init({
+  duration: 800,
+  once: true
+});
