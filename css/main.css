@@ -450,6 +450,56 @@
       margin: 10px 0;
     }
   }
+     /* Why Choose HEC? - Light Theme with Contrast */
+/* Why Choose HEC – Light & Professional */
+.hec-advantages-section {
+  background: #ffffff;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.hec-advantages-section h2 {
+  color: #2B6CB0;       /* your primary blue */
+  font-size: 2rem;
+}
+.hec-advantages-section p {
+  color: #6B7280;       /* cool gray */
+}
+
+/* Card */
+.feature-card {
+  background: #fff;
+  border: 1px solid #E5E7EB; /* light gray */
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #D1D5DB;
+}
+
+/* Icon */
+.icon {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F3F4F6;   /* very light gray */
+  border-radius: 0.5rem;
+}
+
+/* Headings & Text inside cards */
+.feature-card h5 {
+  color: #111827;       /* almost-black */
+  font-size: 1.125rem;
+}
+.feature-card p {
+  color: #4B5563;       /* dark gray */
+  font-size: 0.9375rem;
+  margin-bottom: 0;
+}
 
                 /* study destinations section */
 /* ======================================
@@ -555,94 +605,100 @@
     padding: 3rem 1rem;
   }
 }
+/* ===== Partners Section Base ===== */
+.partners-section {
+  background: #f5f7fa;
+  padding: 40px 0;
+  font-family: 'Inter', sans-serif;
+}
 
-/* Rest of your existing card styles... */
+/* Header */
+.partners-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-  /* ======================================
-     University Partners Section
-  ====================================== */
-  .partners-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px auto;
-    padding: 0px 41px;
-  }
-  
-  /* .header-left h2 {
-    font-size: 28px;
-    color: #2B6CB0;
-    font-weight: bold;
-  } */
-  
-  .partners-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    padding: 15px 21px;
-    background: #ffffff; 
-    text-align: center;
-    margin: 0 22px;
-  }
-  
-  .partner {
-    background: #FFFFFF;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .partner:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  }
-  
-  .partner img {
-    width: 100%;
-    max-width: 140px;
-    height: 80px;
-    object-fit: contain;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .partner:hover img {
-    transform: scale(1.1);
-  }
-  
-  .partner p {
-    font-size: 16px;
-    font-weight: bold;
-    color: #2B6CB0;
-    margin: 5px 0 0;
-  }
-  
-  /* Responsive Adjustments for University Partners */
-  @media (max-width: 768px) {
-    .partners-list {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .partners-list {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
-    .partner img {
-      max-width: 120px;
-      height: 70px;
-    }
-    .partner p {
-      font-size: 14px;
-    }
-  }
+.section-title {
+  font-size: 2rem;
+  color: #2B6CB0;
+  font-weight: 700;
+}
+
+.navigation-arrows .arrow {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #2B6CB0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.navigation-arrows .arrow:hover {
+  transform: scale(1.2);
+}
+
+/* Carousel Wrapper to hide overflow */
+.partners-list-wrapper {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Carousel Track */
+.partners-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  /* duplicate content via JS, then scroll it */
+  animation: scroll-left 30s linear infinite;
+}
+
+/* Each Partner Card */
+.partner {
+  flex: 0 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  min-width: 180px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.partner:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.partner img {
+  max-width: 140px;
+  height: auto;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+.partner p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2B6CB0;
+  margin: 0;
+}
+
+/* Scroll animation */
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .partners-list { gap: 20px; }
+  .partner { min-width: 140px; padding: 15px; }
+}
+@media (max-width: 480px) {
+  .navigation-arrows { display: none; }
+}
+
   
   /* ======================================
    Modern & Professional Video Gallery Section

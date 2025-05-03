@@ -158,3 +158,41 @@ AOS.init({
   duration: 800,
   once: true
 });
+
+          // infinite corousal effect for universities banner 
+
+
+ document.addEventListener('DOMContentLoaded', () => {
+    const wrapper = document.querySelector('.partners-list-wrapper');
+    const track   = document.querySelector('.partners-list');
+    // 1) duplicate so we can loop
+    track.innerHTML += track.innerHTML;
+
+    // 2) infinite auto-scroll
+    let speed = 1;       // pixels per frame
+    let rafId;
+    function autoScroll() {
+      wrapper.scrollLeft += speed;
+      // when we've scrolled half the total (one original set), reset
+      if (wrapper.scrollLeft >= track.scrollWidth / 2) {
+        wrapper.scrollLeft = 0;
+      }
+      rafId = requestAnimationFrame(autoScroll);
+    }
+    autoScroll();
+
+    // 3) arrow controls
+    const scrollAmount = wrapper.clientWidth * 0.8;
+    document.querySelector('.left-arrow').addEventListener('click', () => {
+      wrapper.scrollLeft -= scrollAmount;
+    });
+    document.querySelector('.right-arrow').addEventListener('click', () => {
+      wrapper.scrollLeft += scrollAmount;
+    });
+
+    // 4) pause on hover
+    wrapper.addEventListener('mouseenter', () => cancelAnimationFrame(rafId));
+    wrapper.addEventListener('mouseleave', () => autoScroll());
+  });
+
+
