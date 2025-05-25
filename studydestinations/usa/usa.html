@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study in the USA</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="/hecnew/css/theme.css">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0; padding: 0;
+      background-color: silver;
+      color: #333;
+    }
+    .hero {
+      position: relative;
+      background: url('/hecnew/images/usa-banner.jpg') no-repeat center/cover;
+      height: 400px;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; color: white; padding: 20px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative; z-index: 2; max-width: 80%;
+    }
+    .hero h1 {
+        color: white;
+      font-size: 3em; font-weight: bold; margin-bottom: 10px;
+    }
+    .hero p {
+        color: white;
+      font-size: 1.3em; max-width: 700px; margin: auto;
+    }
+    .section {
+      background: lightblue;
+      padding: 50px 20px;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2.2em;
+      color: #2B6CB0;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #38B2AC;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .universities-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .university {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      width: calc(33% - 40px);
+      min-width: 250px;
+      text-align: left;
+    }
+    @media (max-width: 768px) {
+      .universities-grid { flex-direction: column; }
+      .university { width: 100%; }
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #2B6CB0;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Study in the USA</h1>
+      <p>Unlock your future with world-class universities, cutting-edge research, and diverse campus life.</p>
+    </div>
+  </div>
+
+  <!-- Why Study in the USA? -->
+  <div class="section" id="general-info">
+    <h2>Why Study in the USA?</h2>
+    <p>The USA offers <strong>top-ranked institutions</strong>, <strong>innovative research</strong>, and a <strong>vibrant multicultural environment</strong>.</p>
+    <ul class="text-start mx-auto" style="max-width:700px; margin-top:20px;">
+      <li>🎓 <strong>Home to more than half of the world’s top 100 universities</strong></li>
+      <li>🔬 <strong>Cutting-edge labs and research funding</strong></li>
+      <li>🌎 <strong>Diverse campuses with students from 190+ countries</strong></li>
+      <li>💼 <strong>Optional Practical Training (OPT) up to 36 months</strong></li>
+    </ul>
+  </div>
+
+  <!-- Top Universities -->
+  <div class="section" id="top-universities">
+    <h2>Top Universities in the USA</h2>
+    <div class="universities-grid">
+      <div class="university">
+        <h3>Massachusetts Institute of Technology (MIT)</h3>
+        <p>World leader in engineering, computer science, and innovation.</p>
+      </div>
+      <div class="university">
+        <h3>Stanford University</h3>
+        <p>Heart of Silicon Valley with strengths across tech, entrepreneurship, and humanities.</p>
+      </div>
+      <div class="university">
+        <h3>Harvard University</h3>
+        <p>Renowned for its law, business, medicine, and liberal arts programs.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scholarships -->
+  <div class="section" id="scholarships">
+    <h2>Scholarships for International Students</h2>
+    <p>Major funding opportunities include:</p>
+    <ul class="text-start mx-auto" style="max-width:700px; margin-top:20px;">
+      <li>🏅 <strong>Fulbright Foreign Student Program</strong></li>
+      <li>💰 <strong>University-specific merit scholarships</strong></li>
+      <li>📚 <strong>Research assistantships and teaching assistantships</strong></li>
+    </ul>
+  </div>
+
+  <!-- Visa & Requirements -->
+  <div class="section" id="visa-requirements">
+    <h2>Visa & Study Requirements</h2>
+    <p>Steps to begin your academic journey:</p>
+    <ul class="text-start mx-auto" style="max-width:700px; margin-top:20px;">
+      <li>🛂 <strong>F-1 Student Visa</strong></li>
+      <li>📄 <strong>Form I-20 from your US institution</strong></li>
+      <li>💵 <strong>Proof of funds for tuition & living expenses</strong></li>
+      <li>🩺 <strong>Health insurance coverage</strong></li>
+    </ul>
+  </div>
+
+  <!-- Courses & Fees -->
+  <div class="section" id="courses-fees">
+    <h2>Popular Courses & Fees</h2>
+    <table>
+      <tr>
+        <th>Course</th>
+        <th>Average Fees (USD per year)</th>
+      </tr>
+      <tr>
+        <td>Computer Science & Engineering</td>
+        <td>~ $40,000 – 55,000</td>
+      </tr>
+      <tr>
+        <td>Business & Management</td>
+        <td>~ $35,000 – 50,000</td>
+      </tr>
+      <tr>
+        <td>Health Sciences</td>
+        <td>~ $45,000 – 65,000</td>
+      </tr>
+      <tr>
+        <td>Social Sciences & Humanities</td>
+        <td>~ $30,000 – 45,000</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="/hecnew/js/header.js"></script>
+  <script src="/hecnew/js/footer.js"></script>
+</body>
+</html>
