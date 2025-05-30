@@ -183,17 +183,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a href="/hecnew/studydestinations/germany/germany.html">Study in Germany</a>
                 <a href="/hecnew/studydestinations/switzerland/switzerland.html">Study in Switzerland</a>
                 <a href="/hecnew/studydestinations/italy/italy.html">Study in Italy</a>
+                <a href="/hecnew/studydestinations/usa/usa.html">Study in USA</a>
+                <a href="/hecnew/studydestinations/newzealand/newzealand.html">Study in Newzealand</a>
             </div>
             <div class="footer-column">
                 <h4>Scholarships</h4>
-                <a href="#">Scholarships in USA</a>
-                <a href="#">Scholarships in Canada</a>
-                <a href="#">Scholarships in Australia</a>
-                <a href="#">Scholarships in UK</a>
-                <a href="#">Scholarships in France</a>
-                <a href="#">Scholarships in Germany</a>
-                <a href="#">Scholarships in Switzerland</a>
-                <a href="#">Scholarships in Italy</a>
+                <a href="/hecnew/studydestinations/usa/usa.html">Scholarships in USA</a>
+                <a href="/hecnew/studydestinations/australia/australia.html">Scholarships in Australia</a>
+                <a href="/hecnew/studydestinations/uk/uk.html">Scholarships in UK</a>
+                <a href="/hecnew/studydestinations/france/france.html">Scholarships in France</a>
+                <a href="/hecnew/studydestinations/germany/germany.html">Scholarships in Germany</a>
+                <a href="/hecnew/studydestinations/switzerland/switzerland.html">Scholarships in Switzerland</a>
+                <a href="/hecnew/studydestinations/italy/italy.html">Scholarships in Italy</a>
             </div>
             <div class="footer-column">
                 <h4>Other Links</h4>

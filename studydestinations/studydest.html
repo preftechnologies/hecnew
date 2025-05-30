@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
    
          <!-- Bootstrap Icons CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css">
 
 
     <!-- Page-specific CSS -->
@@ -36,11 +36,100 @@
 
    <div class="header-space"></div>
 
-       <!-- Contact Page Intro -->
-    <section class="contact-intro">
-        <h1>Explore Study Destinations</h1>
-        <p>Find the perfect country to begin your higher education journey.</p>
-    </section>
+
+    <!-- Contact Page Intro -->
+<section class="contact-intro">
+    <h1>Explore Study Destinations</h1>
+    <p>Find the perfect country to begin your higher education journey.</p>
+</section>
+
+
+<!-- Study Destinations Section -->
+<section class="study-destinations-section" data-aos="fade-up">
+  <div class="container py-5">
+     <!-- <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+              <h2 class="display-4 fw-bold text-primary mb-3">Study Destinations</h2>
+              <p class="lead text-muted">World-class education opportunities across the globe</p>
+          </div>
+      </div> -->
+
+      <div class="row g-4 justify-content-center">
+          <!-- UK Card -->
+          <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+              <div class="destination-card h-100">
+                  <div class="card-icon bg-uk">
+                      <i class="fas fa-landmark fa-3x text-white"></i>
+                  </div>
+                  <div class="card-body">
+                      <h3 class="h4 fw-bold">United Kingdom</h3>
+                      <p class="text-muted">Home to world-renowned universities with centuries of academic excellence</p>
+                  </div>
+                  <div class="card-footer bg-transparent border-0">
+                      <a href="studydestinations/studydest.html" class="btn btn-sm btn-outline-primary stretched-link">Explore UK</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Europe Card -->
+          <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+              <div class="destination-card h-100">
+                  <div class="card-icon bg-europe">
+                      <i class="fas fa-globe-europe fa-3x text-white"></i>
+                  </div>
+                  <div class="card-body">
+                      <h3 class="h4 fw-bold">Europe</h3>
+                      <p class="text-muted">France, Germany, Italy, Malta, Ireland & Spain's top institutions</p>
+                  </div>
+                  <div class="card-footer bg-transparent border-0">
+                      <a href="studydestinations/studydest.html" class="btn btn-sm btn-outline-primary stretched-link">Explore Europe</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- North America Card -->
+          <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+              <div class="destination-card h-100">
+                  <div class="card-icon bg-america">
+                      <i class="fas fa-university fa-3x text-white"></i>
+                  </div>
+                  <div class="card-body">
+                      <h3 class="h4 fw-bold">North America</h3>
+                      <p class="text-muted">USA & Canada's leading programs in every academic field</p>
+                  </div>
+                  <div class="card-footer bg-transparent border-0">
+                      <a href="studydestinations/studydest.html" class="btn btn-sm btn-outline-primary stretched-link">Explore NA</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Oceania Card -->
+          <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+              <div class="destination-card h-100">
+                  <div class="card-icon bg-oceania">
+                      <i class="fas fa-kiwi-bird fa-3x text-white"></i>
+                  </div>
+                  <div class="card-body">
+                      <h3 class="h4 fw-bold">Oceania</h3>
+                      <p class="text-muted">New Zealand's innovative universities and quality education</p>
+                  </div>
+                  <div class="card-footer bg-transparent border-0">
+                      <a href="studydestinations/studydest.html" class="btn btn-sm btn-outline-primary stretched-link">Explore Oceania</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="text-center mt-5 pt-3" data-aos="fade-up" data-aos-delay="500">
+          <a href="studydestinations/studydest.html" class="btn btn-primary btn-lg px-5 py-3">
+              Explore All Destinations <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+      </div>
+  </div>
+</section>
+
+
+
 
    <div class="container my-5">
        <div class="row justify-content-center">
@@ -96,12 +185,29 @@
                </a>
            </div>
            <div class="col-md-4 mb-4">
-            <a href="uk/uk.html" class="country-link">
-                <div class="country-block" style="background-image: url('../images/ukflag.jpg');">
-                    <h3>UK</h3>
-                </div>
-            </a>
-        </div>
+               <a href="uk/uk.html" class="country-link">
+                   <div class="country-block" style="background-image: url('../images/ukflag.jpg');">
+                       <h3>UK</h3>
+                   </div>
+               </a>
+           </div>
+
+           <!-- NEW: USA -->
+           <div class="col-md-4 mb-4">
+               <a href="usa/usa.html" class="country-link">
+                   <div class="country-block" style="background-image: url('../images/usaflag.jpg');">
+                       <h3>USA</h3>
+                   </div>
+               </a>
+           </div>
+           <!-- NEW: New Zealand -->
+           <div class="col-md-4 mb-4">
+               <a href="newzealand/newzealand.html" class="country-link">
+                   <div class="country-block" style="background-image: url('../images/newzealandflag.jpg');">
+                       <h3>New Zealand</h3>
+                   </div>
+               </a>
+           </div>
        </div>
    </div>
 
