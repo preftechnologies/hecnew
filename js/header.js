@@ -99,9 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        body {
-            padding-top: 80px;
-        }
+        
     </style>
 
     <nav class="navbar navbar-expand-lg navbar-dark">

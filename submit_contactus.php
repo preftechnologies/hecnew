@@ -34,13 +34,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'alikhanblog111@gmail.com';
-        $mail->Password = 'qmqn bckn ybhs fmng';
+        $mail->Username = 'hecco.info@gmail.com';
+        $mail->Password = 'adswrhverkmdhfcb';
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
-        $mail->setFrom('alikhanblog111@gmail.com', 'HEC Website');
-        $mail->addAddress('alikhanblog111@gmail.com');
+        $mail->setFrom('hecco.info@gmail.com', 'HEC Website');
+        $mail->addAddress('hecco.info@gmail.com');
         $mail->Subject = "New Contact Form Submission";
         $mail->Body = "New Contact Request:\n\nName: $name\nEmail: $email\nMobile: $mobile\nSubject: $subject\nMessage:\n$message";
         

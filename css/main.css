@@ -1,6 +1,10 @@
 /* ======================================
    Global Styles & Resets
 ====================================== */
+body {
+  padding-top: 80px !important; /* Match the navbar height */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -151,15 +155,14 @@
     margin: 0 24px; /* Ensure no margin above the section */
   }
   
-  /* .partners-section h2 {
-    font-size: 2em;
-    color: #1F2937;  
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    position: relative;
-    line-height: 1.2;
-  } */
+/* Center only the <h2 class="section-title"> inside .partners-section */
+.partners-section .section-title {
+  display: block;      /* treat it as a block-level element */
+  width: 100%;         /* span the full width of its parent */
+  text-align: center;  /* center the text */
+  margin-left: auto;   /* (optional) remove any stray margins */
+  margin-right: auto;  /* (optional) remove any stray margins */
+}
 
   .partners-section h2 span {
     color: #5c7457; /* Emphasis color */
@@ -170,20 +173,25 @@
     flex-wrap: wrap;
   }
   
-  .partner-box {
-    background-color: #fff; /* Box background color */
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced box shadow */
-    width: 28%; /* Reduced width to fit three boxes in a row */
-    margin: 10px;
-    color: #214e34; /* Text color */
-    opacity: 0; /* Initial state for animation */
-    transform: translateY(20px); /* Initial state for animation */
-    transition: opacity 1s ease-out, transform 1s ease-out;
-  }
-  
+ .partner-box {
+  background-color: #fff; /* Box background color */
+  border-radius: 10px;
+  padding: 20px;
+  /* remove text-align:center, since flex will center children if needed */
+  /* text-align: center; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced box shadow */
+  width: 28%; /* Reduced width to fit three boxes in a row */
+  margin: 10px;
+  color: #214e34; /* Text color */
+  opacity: 0; /* Initial state for animation */
+  transform: translateY(20px); /* Initial state for animation */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+
+  /* ─── NEW LINES ───────────────────────────────────────────────────── */
+  display: flex;
+  flex-direction: column;
+  /* ───────────────────────────────────────────────────────────────── */
+}
   .partner-box.visible {
     opacity: 1;
     transform: translateY(0);
@@ -226,19 +234,22 @@
   }
   
   .partner-box .know-more {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #0d6efd; /* Button background color */
-    color: #efd0ca; /* Button text color */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .partner-box .know-more:hover {
-    background-color: #c1535b; /* Button hover background color */
-  }
+  display: inline-block;
+  /* ─── CHANGE HERE ────────────────────────────────────────────────── */
+  margin-top: auto;
+  /* ───────────────────────────────────────────────────────────────── */
+  align-self: center;
+  padding: 10px 20px;
+  background-color: #0d6efd; /* Button background color */
+  color: #efd0ca; /* Button text color */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.partner-box .know-more:hover {
+  background-color: green; /* Button hover background color */
+}
   
   /* Responsive styles */
   @media (max-width: 768px) {
@@ -319,12 +330,14 @@
 /* Why Choose HEC – Light & Professional */
 .hec-advantages-section {
   background: #ffffff;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+ padding-top: 2rem !important; /* instead of 3rem (py-5), use 2rem */
+  padding-bottom: 3rem;         /* keep bottom padding if you like */
 }
 .hec-advantages-section h2 {
-  color: #2B6CB0;       /* your primary blue */
+  color: #0d6efd;       /* your primary blue */
   font-size: 2rem;
+  font-weight:bolder ;
+  padding-top: -2rem;
 }
 .hec-advantages-section p {
   color: #6B7280;       /* cool gray */
@@ -386,7 +399,7 @@
   z-index: -1;
 }
 
-. .container {
+.container {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -481,7 +494,7 @@
 /* Header */
 .partners-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -569,22 +582,24 @@
   /* ======================================
      University Partners Section
   ====================================== */
-  .partners-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px auto;
-    padding: 0px 41px;
-  }
+ .universities-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers children horizontally */
+  gap: 10px;
+  text-align: center;
+}
+
   
-  /* .header-left h2 {
-    font-size: 28px;
-    color: #2B6CB0;
+   .header-left h2 {
+    text-align: center;
+    font-weight: 2.7rem;
+    font-size: 36px;
+    color: #2563eb;
     font-weight: bold;
-  } */
-  
+  }  
   .partners-list {
-    display: grid;
+    
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
     justify-content: center;
@@ -596,8 +611,8 @@
   
   .partner {
     background: #FFFFFF;
-    padding: 15px;
-    border-radius: 12px;
+    padding: 10px;
+    border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -656,7 +671,7 @@
    Modern & Professional Video Gallery Section
 ====================================== */
 .video-gallery {
-    background: #dee2e6;
+    background: lightgrey;
     padding: 10px 26px;
     color: #e2e8f0;
     text-align: center;
@@ -955,4 +970,183 @@
 
 .hero-slider {
   margin-bottom: 20px; /* Add spacing below hero section */
+}
+
+   
+           /* ===============================================
+   Updated Why Choose HEC? Section – Smaller Cards
+   =============================================== */
+
+/* 1) Container and Section Spacing (unchanged) */
+.hec-advantages-section {
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+}
+
+.hec-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hec-header {
+  margin-bottom: 1.5rem; /* slightly reduced bottom margin */
+}
+
+.hec-title {
+  font-size: 2.25rem;    /* a bit smaller than before */
+  font-weight: 700;
+  color: #2B6CB0;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.hec-subtitle {
+  font-size: 1.05rem; /* slightly smaller subtitle */
+  color: #6B7280;
+  margin: 0;
+}
+
+/* =================================================
+   2) Grid: Still 3 columns at ≥992px, but tighter gaps
+   ================================================= */
+.hec-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; /* reduce gap so cards sit closer together */
+}
+
+@media (max-width: 991.98px) {
+  .hec-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hec-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================================
+   3) Individual Card Styling – Shrunk Down
+   ====================================== */
+.hec-feature-card {
+  background-color: #f5f5f5;        /* light gray background */
+  border: 1px solid #E0E0E0;
+  border-radius: 0.5rem;            /* approx. 8px rounding */
+  padding: 1.5rem;                  /* reduce padding from 2rem→1.5rem */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 250px;                /* shrink min-height from 320px→250px */
+}
+
+.hec-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-color: #D1D5DB;
+}
+
+/* ======================================
+   4) Icon Circle (slightly smaller)
+   ====================================== */
+.hec-icon {
+  width: 3rem;         /* reduced from 3.5rem→3rem */
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem; /* reduce bottom margin */
+  font-size: 1.25rem;    /* reduce icon size */
+  color: #ffffff;
+}
+
+/* Color variants unchanged */
+.hec-icon-primary   { background-color: #2B6CB0; }
+.hec-icon-success   { background-color: #38B2AC; }
+.hec-icon-info      { background-color: #0EA5E9; }
+.hec-icon-warning   { background-color: #F59E0B; }
+.hec-icon-secondary { background-color: #64748B; }
+.hec-icon-danger    { background-color: #EF4444; }
+
+/* ======================================
+   5) Card Title & Text – Larger and More “Filling”
+   ====================================== */
+.hec-card-title {
+  font-size: 1.5rem;  /* bump from 1.25rem→1.5rem */
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.hec-card-text {
+  font-size: 1.1rem;  /* bump from 0.95rem→1.1rem */
+  color: #4B5563;
+  margin: 0;
+  flex-grow: 1;       /* pushes any footer/action to the very bottom if added */
+  line-height: 1.5;   /* a bit more line-height to fill space */
+}
+
+/* (Optional) If you want a small button or link at bottom of each card,
+   you could add something like:
+.hec-feature-card .btn {
+  margin-top: 1rem;
+}
+*/
+
+/* ======================================
+   6) Responsive Text/Size Adjustments
+   ====================================== */
+@media (max-width: 991.98px) {
+  .hec-title {
+    font-size: 2rem;
+  }
+  .hec-subtitle {
+    font-size: 1rem;
+  }
+  .hec-feature-card {
+    padding: 1.25rem;
+    min-height: 230px;
+  }
+  .hec-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.15rem;
+  }
+  .hec-card-title {
+    font-size: 1.4rem;
+  }
+  .hec-card-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hec-title {
+    font-size: 1.75rem;
+  }
+  .hec-subtitle {
+    font-size: 0.95rem;
+  }
+  .hec-feature-card {
+    padding: 1rem;
+    min-height: 200px;
+  }
+  .hec-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+  .hec-card-title {
+    font-size: 1.3rem;
+  }
+  .hec-card-text {
+    font-size: 0.95rem;
+  }
 }

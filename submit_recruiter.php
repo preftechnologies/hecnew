@@ -43,13 +43,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'alikhanblog111@gmail.com'; // Your email
-        $mail->Password = 'qmqn bckn ybhs fmng'; // Your App Password
+        $mail->Username = 'hecco.info@gmail.com'; // Your email
+        $mail->Password = 'adswrhverkmdhfcb'; // Your App Password
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
-        $mail->setFrom('alikhanblog111@gmail.com', 'HEC Website');
-        $mail->addAddress('alikhanblog111@gmail.com');
+        $mail->setFrom('hecco.info@gmail.com', 'HEC Website');
+        $mail->addAddress('hecco.info@gmail.com');
         $mail->Subject = "New Recruiter Partner Request";
         $mail->Body = "A new recruiter has applied:\n\nName: $name\nEmail: $email\nCompany: $company\nMessage: $message";
 

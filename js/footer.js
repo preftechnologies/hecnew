@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const floatingElements = `
         <div class="floating-container">
-            <a href="https://wa.me/923059676763" target="_blank" class="whatsapp-container" title="Chat on WhatsApp">
+            <a href="https://wa.me/923351503771" target="_blank" class="whatsapp-container" title="Chat on WhatsApp">
                 <i class="bi bi-whatsapp"></i>
                 Quick Contact
             </a>

@@ -62,32 +62,69 @@ body {
   transform: scale(1.05);
 }
 
-/* ==========================================
-   Custom Footer CTA Section (Overriding bg-primary)
-========================================== */
+/* ============================================================
+   Footer Call-to-Action (Recruiter CTA) – Custom Styling
+   ============================================================ */
+
+/* 1) Section Wrapper: light background, slight inset shadow */
 .recruiter-cta {
-  background: linear-gradient(135deg, #9fb3c9, #bddfde);
-  padding: 60px 20px;
-  color: #fff;
+  background-color: #F9FAFB;      /* very-light-gray / almost-white */
+  padding: 60px 20px;             /* generous vertical padding */
+  text-align: center;             /* center all contents */
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);
 }
-.recruiter-cta h2 {
-  margin-bottom: 20px;
-  font-weight: bold;
+
+/* 2) Heading: large, centered, blue */
+.recruiter-cta .cta-heading {
+  font-size: 2.5rem;              /* large heading */
+  font-weight: 700;
+  color: #2B6CB0;                 /* brand-blue */
+  margin-bottom: 16px;
+  line-height: 1.2;
 }
-.recruiter-cta p {
-  margin-bottom: 30px;
+
+/* 3) Lead paragraph: medium-gray text */
+.recruiter-cta .cta-lead {
+  font-size: 1.125rem;            /* slightly larger than normal */
+  color: #4A5568;                 /* medium-gray */
+  margin-bottom: 32px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
-.recruiter-cta .btn {
-  padding: 14px 30px;
+
+/* 4) Button: vibrant gradient, rounded, hover animation */
+.recruiter-cta .cta-btn {
+  background: linear-gradient(135deg, #2563EB, #3B82F6); /* bright blue→lighter blue */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 40px;             /* a bit more padding for a bold look */
   font-size: 1rem;
-  border-radius: 12px;
-  background-color: #ffffff;
-  color: #1a202c;
   font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
-.recruiter-cta .btn:hover {
-  background-color: #e2e8f0;
+
+.recruiter-cta .cta-btn:hover {
+  background: linear-gradient(135deg, #1D4ED8, #2563EB); /* slightly darker on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
 }
+
+/* 5) Button: responsive shrink on very small screens */
+@media (max-width: 576px) {
+  .recruiter-cta .cta-btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+}
+
 
 /* Popup Form Styling — unchanged */
 .popup-form-container {
@@ -179,4 +216,302 @@ body {
 @keyframes zoomIn {
   from { opacity: 0; transform: scale(0.92); }
   to   { opacity: 1; transform: scale(1); }
+}
+     
+
+
+/* ============================================
+   1) Wrapper & Container
+   ============================================ */
+.wp-section {
+  background-color: #f8f9fa; /* light off-white */
+  padding: 3rem 1rem;
+}
+
+.wp-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   2) Section Header (blue title + subtitle)
+   ============================================ */
+.wp-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.wp-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2B6CB0; /* blue */
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.wp-header .wp-subtitle {
+  font-size: 1.125rem;
+  color: #6B7280; /* gray */
+  margin: 0;
+}
+
+/* ============================================
+   3) Grid Layout: 3x2 on desktop, 2x3 on tablet, 1x6 on mobile
+   ============================================ */
+.wp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .wp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .wp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   4) Individual Card Styling
+   ============================================ */
+.wp-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 260px; /* ensures roughly uniform height */
+}
+
+.wp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   5) Icon Circle (colored backgrounds)
+   ============================================ */
+.wp-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+/* Six color variants */
+.wp-icon-primary   { background-color: #2B6CB0; } /* blue */
+.wp-icon-success   { background-color: #38B2AC; } /* teal */
+.wp-icon-warning   { background-color: #F59E0B; } /* amber */
+.wp-icon-info      { background-color: #0EA5E9; } /* sky-blue */
+.wp-icon-secondary { background-color: #64748B; } /* gray-500 */
+.wp-icon-danger    { background-color: #EF4444; } /* red-500 */
+
+/* ============================================
+   6) Card Title & Text
+   ============================================ */
+.wp-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827; /* almost-black */
+  margin-bottom: 0.5rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.wp-text {
+  font-size: 1rem;
+  color: #4B5563; /* dark gray */
+  text-align: center;
+  margin: 0;
+  flex-grow: 1; /* push content to fill vertical space */
+  line-height: 1.5;
+}
+
+/* ============================================
+   7) Responsive Text / Padding Adjustments
+   ============================================ */
+@media (max-width: 991.98px) {
+  .wp-header h2 {
+    font-size: 2.25rem;
+  }
+  .wp-header .wp-subtitle {
+    font-size: 1rem;
+  }
+  .wp-card {
+    padding: 1.5rem 1rem;
+    min-height: 240px;
+  }
+  .wp-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+  }
+  .wp-title {
+    font-size: 1.15rem;
+  }
+  .wp-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .wp-header h2 {
+    font-size: 2rem;
+  }
+  .wp-header .wp-subtitle {
+    font-size: 0.95rem;
+  }
+  .wp-card {
+    padding: 1.25rem 0.75rem;
+    min-height: 220px;
+  }
+  .wp-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+  }
+  .wp-title {
+    font-size: 1.1rem;
+  }
+  .wp-text {
+    font-size: 0.9rem;
+  }
+}
+     
+
+
+   /* ==========================================================================
+   OUR IMPACT SECTION – PROFESSIONAL STYLING (with 4-in-row layout)
+   ========================================================================== */
+
+/* 1) Section Wrapper */
+.impact-section {
+  background-color: #F5F7FA;            /* very light gray background */
+  padding: 80px 20px;                   /* generous top/bottom padding */
+  font-family: 'Inter', sans-serif;     /* clean, modern font */
+  color: #1F2937;                       /* charcoal-dark text */
+}
+
+/* 2) Constrain Content Width */
+.impact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 3) Header (Title + Subtitle + Lead Copy) */
+.impact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.impact-header h2 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #2B6CB0;      /* brand-blue */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.impact-header h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2B6CB0;      /* same blue for consistency */
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.impact-header .impact-lead {
+  font-size: 1.125rem;      /* slightly larger lead text */
+  font-weight: 500;
+  color: #4B5563;           /* medium gray */
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.impact-header .impact-sub {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #6B7280;           /* lighter gray for subtext */
+  line-height: 1.6;
+}
+
+/* 4) Grid of Metrics – Force 4 columns on desktop */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Collapse to 2 columns on medium screens */
+@media (max-width: 991.98px) {
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Collapse to 1 column on small/mobile screens */
+@media (max-width: 767.98px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 5) Individual Metric Card */
+.metric-card {
+  background-color: #FFFFFF;               /* pure white card */
+  border-radius: 12px;                     /* soft, rounded corners */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05); /* subtle drop shadow */
+  padding: 2rem 1.5rem;                    /* comfortable inner padding */
+  width: 100%;
+  max-width: 300px;                        /* limit width on large screens */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* 6) Icon / Emoji Above Each Metric */
+.metric-icon {
+  font-size: 2.5rem;        /* large emoji/icon */
+  margin-bottom: 16px;
+  color: #2B6CB0;           /* match brand-blue */
+}
+
+/* 7) Number Heading (Primary Metric) */
+.metric-card h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2B6CB0;            /* blue number stands out */
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+/* 8) Label Text Below Number */
+.metric-card p {
+  font-size: 1rem;
+  color: #4B5563;            /* medium gray label */
+  margin: 0;
+  line-height: 1.4;
 }

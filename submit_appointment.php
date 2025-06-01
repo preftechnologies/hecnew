@@ -37,14 +37,14 @@ if ($conn->query($sql) === TRUE) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'alikhanblog111@gmail.com';  // Your Gmail
-        $mail->Password = 'qmqn bckn ybhs fmng';  // Use App Password (not your normal password)
+        $mail->Username = 'hecco.info@gmail.com';  // Your Gmail
+        $mail->Password = 'adswrhverkmdhfcb';  // Use App Password (not your normal password)
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Email Settings
-        $mail->setFrom('your-email@gmail.com', 'Your Website');
-        $mail->addAddress('alikhanblog111@gmail.com');
+        $mail->setFrom('hecco.info@gmail.com', 'Your Website');
+        $mail->addAddress('hecco.info@gmail.com');
         $mail->Subject = "New Appointment Booking";
         $mail->Body = "You have a new appointment request:\n\nName: $name\nEmail: $email\nPhone: $phone\nMessage: $message";
 

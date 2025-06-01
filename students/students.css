@@ -1,66 +1,167 @@
-/* students.css */
-
-/* Hero Image Banner */
+/* ----------------------------------------
+   Hero Image Banner (students.css)
+   ---------------------------------------- */
 .hero-image-banner {
-    position: relative;
-    background: url("../images/students2.jpg") no-repeat center/cover;
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
+  position: relative;
+  background: url("../images/students2.jpg") no-repeat center/cover;
+  min-height: 80vh;                /* fill most of viewport height */
+  display: flex;
+  align-items: center;             /* vertical center */
+  justify-content: center;         /* horizontal center */
+  text-align: center;
+  overflow: hidden;
+  padding: 4rem 1rem;              /* pushes content below nav */
+}
+
+/* Dark overlay to improve readability */
+.hero-image-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Hero content block (no longer fixed) */
+.hero-image-banner .content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  width: 100%;
+  color: #fff;
+  margin: 0 auto;
+}
+
+/* Main heading inside hero */
+.hero-image-banner h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease both;
+  line-height: 1.2;
+}
+
+/* Sub‐paragraph inside hero */
+.hero-image-banner p {
+  color: antiquewhite;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease both;
+  animation-delay: 0.5s;
+  line-height: 1.5;
+}
+
+/* “Book Appointment” button */
+.openStudentForm {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #38B2AC, #2B6CB0);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+  animation: fadeIn 1s ease both;
+  animation-delay: 1s;
+}
+
+.openStudentForm:hover {
+  transform: scale(1.05);
+}
+
+/* ----------------------------------------
+   Fade/Zoom Keyframes (no change needed) 
+   ---------------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+  /* ----------------------------
+   Simplified Winning Record
+   (no cards, borders or animations)
+   ---------------------------- */
+
+/* 1) Make the row container flex so all three items sit in one line */
+.winning-record .row.gy-4 {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;      /* space between each “stat” */
+  margin-top: 1rem;
+  flex-wrap: nowrap; /* keep all three on one line (wrap only on very small screens) */
+}
+
+/* On narrow screens, allow wrap */
+@media (max-width: 767.98px) {
+  .winning-record .row.gy-4 {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
-  .hero-image-banner::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.4);
-    z-index: 1;
-  }
-  .hero-image-banner .content {
-    position: relative;
-    z-index: 2;
-    max-width: 600px;
-    color: #fff;
-  }
-  .hero-image-banner h1 {
-    color: white;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    animation: fadeInDown 1s ease both;
-  }
-  .hero-image-banner p {
-    color: antiquewhite;
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    animation: fadeInUp 1s ease both;
-    animation-delay: 0.5s;
-  }
-  .openStudentForm {
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #38B2AC, #2B6CB0);
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.3s, background 0.3s;
-    animation: fadeIn 1s ease both;
-    animation-delay: 1s;
-  }
-  .openStudentForm:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Animations */
-  @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
-  @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  
-  /* Winning Record & Why Study Abroad reuse your existing styles under students.css… */
+}
+
+/* 2) Remove box/background on each “stat‐card” and simplify */
+.winning-record .stat-card {
+  background: transparent;  /* no colored box */
+  border: none;             /* no border */
+  box-shadow: none;         /* remove any shadow */
+  width: auto;              /* let content size itself */
+  padding: 0;               /* remove extra padding */
+  margin: 0;                /* remove extra margin */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 3) Style the icon: medium‐sized and brand‐blue */
+.winning-record .stat-card i {
+  font-size: 2.5rem;
+  color: #2B6CB0;    /* brand‐blue */
+  margin-bottom: 0.5rem;
+}
+
+/* 4) Style the number (h4): slightly smaller, brand‐blue */
+.winning-record .stat-card h4 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2B6CB0;
+  margin: 0.25rem 0;  /* small top/bottom gap */
+  line-height: 1.2;
+}
+
+/* 5) Style the description text: simple gray */
+.winning-record .stat-card p {
+  font-size: 0.9rem;
+  color: #4A5568;    /* medium gray */
+  margin: 0;         /* no extra vertical spacing */
+  line-height: 1.4;
+}
+
+/* 6) Heading for the entire section: keep it brand‐blue */
+.winning-record h2 {
+  color: #2B6CB0;    /* brand‐blue */
+  margin-bottom: 0.75rem;
+}
+
+/* tighten up spacing above/below the small label (h6) and paragraph */
+.winning-record .text-danger {
+  margin-bottom: 0.25rem;
+}
+.winning-record p.text-muted {
+  margin-bottom: 1.5rem;
+}
+
   /* =============================== */
 /*          POPUP CONTAINER        */
 /* =============================== */
@@ -205,5 +306,105 @@
   }
 }
 
-  /* You can keep your existing .winning-record, .stat-card, .why-study-abroad styles */
+  /* why study abroad  */
+  /* ========================================================================
+   Enhanced Styling for “Why Study Abroad” Section
+   ======================================================================== */
+
+.why-study-abroad {
+  background-color: #ffffff; /* keep background light/white */
+  padding-top: 4rem;         /* extra breathing room above */
+  padding-bottom: 4rem;      /* extra breathing room below */
+  font-family: 'Inter', sans-serif;
+}
+
+/* Subtitle (h6) */
+.why-study-abroad .subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #DC3545;           /* subtle gray for the “Study Abroad” label */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Main Title (h2) */
+.why-study-abroad .title {
+  font-size: 2.30rem;        /* larger than default h2 */
+  font-weight: 600;
+  color: #2B6CB0;            /* primary blue */
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+/* Lead Paragraph under the heading */
+.why-study-abroad .lead-text {
+  font-size: 1.125rem;       /* slightly larger for readability */
+  color: #4B5563;            /* dark gray/charcoal */
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Benefits List */
+.why-study-abroad .benefits-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #374151;            /* charcoal for list copy */
+  display: flex;
+  align-items: flex-start;
+}
+
+.why-study-abroad .benefits-list li i {
+  font-size: 1.2rem;         /* make the icon a bit larger */
+  color: #2B6CB0;            /* same primary blue */
+  margin-top: 0.15rem;       /* align the icon vertically with text */
+}
+
+/* Image Styles */
+.why-study-abroad .img-fluid {
+  max-width: 100%;
+  border-radius: 0.75rem;    /* match the rounded corners elsewhere */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.why-study-abroad .img-fluid:hover {
+  transform: scale(1.02);
+}
+
+/* “animate-zoom” Animation (if not already defined) */
+@keyframes zoomFloat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.why-study-abroad .animate-zoom {
+  animation: zoomFloat 6s ease-in-out infinite;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767.98px) {
+  .why-study-abroad .title {
+    font-size: 2.25rem;
+    text-align: center;
+  }
+  .why-study-abroad .lead-text {
+    text-align: center;
+  }
+  .why-study-abroad .benefits-list {
+    padding-left: 0; /* remove extra indent */
+  }
+  .why-study-abroad .benefits-list li {
+    justify-content: center;
+    text-align: center;
+  }
+  .why-study-abroad .benefits-list li i {
+    margin-right: 0.5rem;
+  }
+}
+
   

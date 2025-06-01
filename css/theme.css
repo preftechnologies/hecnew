@@ -189,3 +189,14 @@
     color: var(--danger-color);
   }
   
+
+
+   /* ──────────────────────────────────────────────────────────────────
+   Undo the “.container { padding: 3rem 0 }” only inside your navbar
+──────────────────────────────────────────────────────────────────── */
+
+nav.navbar .container {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
