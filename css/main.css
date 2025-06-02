@@ -582,12 +582,32 @@ body {
   /* ======================================
      University Partners Section
   ====================================== */
+
+  .partners-section {
+  padding-top: 20px;   /* was larger—now just 20px */
+  padding-bottom: 20px;/* was larger—now just 20px */
+}
  .universities-header {
   display: flex;
   flex-direction: column;
   align-items: center; /* centers children horizontally */
   gap: 10px;
   text-align: center;
+  position: relative;
+  padding-top: 5px;    /* reduce top padding */
+  padding-bottom: 50px;
+}
+
+.universities-header .navigation-arrows {
+  position: absolute;
+  top: 25%;                     /* vertically center within .universities-header */
+  right: 20px;                  /* adjust as needed to sit flush with the right margin */
+  transform: translateY(-50%);  /* exact vertical centering */
+}
+.universities-header .header-left h2 {
+  
+  margin-top: -1;         /* tighten space above title */
+  margin-bottom: 4px;
 }
 
   
@@ -608,6 +628,12 @@ body {
     text-align: center;
     margin: 0 22px;
   }
+
+  .partners-list-wrapper {
+  margin-top: 10px;    /* instead of default ~15–20px, now only 10px */
+   /* keep a small margin below logos */
+}
+
   
   .partner {
     background: #FFFFFF;

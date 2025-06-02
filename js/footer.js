@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="footer-column">
                 <h4>Scholarships</h4>
                 <a href="/hecnew/studydestinations/usa/usa.html">Scholarships in USA</a>
-                <a href="/hecnew/studydestinations/cananda/canada.html">Scholarships in Canada</a>
+                <a href="/hecnew/studydestinations/canada/canada.html">Scholarships in Canada</a>
                 <a href="/hecnew/studydestinations/australia/australia.html">Scholarships in Australia</a>
                 <a href="/hecnew/studydestinations/uk/uk.html">Scholarships in UK</a>
                 <a href="/hecnew/studydestinations/france/france.html">Scholarships in France</a>
