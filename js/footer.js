@@ -168,10 +168,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img src="/hecnew/images/logo666.png" alt="HEC Logo" style="width: 120px; margin-bottom: 15px;">
                 <p>HEC is a premier education consultancy, guiding students in pursuing higher education abroad with expert assistance and a trusted network.</p>
                 <div class="social-icons">
-                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.facebook.com/share/157bmcWchSt/"><i class="bi bi-facebook"></i></a>
                     <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/hecco_info?igsh=ZXp2aDU5a2tkcmlj"><i class="bi bi-instagram"></i></a>
                     <a href="#"><i class="bi bi-youtube"></i></a>
+                    
                 </div>
             </div>
             <div class="footer-column">

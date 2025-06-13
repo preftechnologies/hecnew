@@ -1,0 +1,155 @@
+body {
+  padding-top: 80px !important;
+  background: linear-gradient(135deg, #f9fafd 0%, #e4f0fc 100%) !important;
+  min-height: 100vh !important;
+}
+
+.upload-video-admin {
+  min-height: 80vh !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+
+.admin-upload-card {
+  border-radius: 1.25rem !important;
+  border: none !important;
+  background: #fff !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 40px 0 rgba(52, 61, 75, 0.12) !important;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 32px !important;
+}
+
+.admin-upload-card:hover {
+  transform: translateY(-2px) scale(1.012);
+  box-shadow: 0 12px 48px 0 rgba(52, 61, 75, 0.15) !important;
+}
+
+/* Card header: modern and compact */
+.card-header {
+  background: linear-gradient(90deg, #2563eb 0%, #2b6cb0 100%) !important;
+  color: #fff !important;
+  border-bottom: none !important;
+  padding: 0.95rem 1.2rem !important;
+  font-weight: 600 !important;
+  font-size: 1.17rem !important;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 1.25rem 1.25rem 0 0 !important;
+  box-shadow: 0 2px 16px 0 rgba(44, 107, 197, 0.08);
+}
+
+.admin-icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1cb46c;
+  color: #fff;
+  border-radius: 50%;
+  width: 2.15rem;
+  height: 2.15rem;
+  font-size: 1.13rem;
+  box-shadow: 0 2px 8px rgba(44, 197, 128, 0.14);
+}
+
+.card-header h5 {
+  margin: 0 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  font-size: 1.14rem !important;
+  color: #fff !important;
+}
+
+/* Card body: nice padding */
+.card-body {
+  padding: 2rem 1.5rem 1.5rem 1.5rem !important;
+}
+
+.form-label {
+  font-weight: 500 !important;
+  color: #23304a !important;
+  margin-bottom: 0.3rem !important;
+  font-size: 1rem !important;
+}
+
+.form-control {
+  border-radius: 0.7rem !important;
+  border: 1.5px solid #e1e6ef !important;
+  box-shadow: none !important;
+  font-size: 1rem !important;
+  padding: 0.7rem 1.05rem !important;
+  transition: border 0.2s, box-shadow 0.2s !important;
+  background: #fafdff !important;
+}
+
+.form-control:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 0.14rem #2563eb3d !important;
+  background: #fff !important;
+  outline: none !important;
+}
+
+textarea.form-control {
+  min-height: 96px !important;
+  resize: vertical !important;
+}
+
+.btn-success {
+  background: linear-gradient(90deg, #1cb46c 60%, #31d07d 100%) !important;
+  border: none !important;
+  border-radius: 0.9rem !important;
+  font-size: 1.08rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  padding: 0.77rem 0 !important;
+  box-shadow: 0 2px 8px 0 rgba(32, 152, 109, 0.09) !important;
+  transition: background 0.18s !important;
+  color: #fff !important;
+  margin-top: 0.3rem !important;
+}
+
+.btn-success:hover, .btn-success:focus {
+  background: linear-gradient(90deg, #189a5b 60%, #1cb46c 100%) !important;
+  color: #fff !important;
+}
+
+/* Make the card a little wider for desktop */
+@media (min-width: 992px) {
+  .col-lg-6 {
+    max-width: 520px !important;
+    flex: 0 0 520px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .admin-upload-card {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+    border-radius: 1rem !important;
+  }
+  .card-body, .card-header {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .col-md-8 {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .upload-video-admin {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .admin-upload-card {
+    border-radius: 0.7rem !important;
+  }
+  .card-header {
+    font-size: 1.04rem !important;
+    padding: 0.8rem !important;
+  }
+}

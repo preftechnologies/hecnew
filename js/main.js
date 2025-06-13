@@ -145,3 +145,26 @@ document.addEventListener('DOMContentLoaded', () => {
   wrapper.addEventListener('mouseleave', () => autoScroll());
 });
   
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const container = document.querySelector('.video-gallery-container');
+  const rightArrow = document.querySelector('.video-arrow-right');
+  const leftArrow = document.querySelector('.video-arrow-left');
+
+  function scrollByOneCard(direction) {
+    if (!container) return;
+    const card = container.querySelector('.video-item');
+    if (card) {
+      const cardWidth = card.offsetWidth + 30; // 30px gap
+      container.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+    }
+  }
+
+  if (rightArrow) {
+    rightArrow.onclick = function() { scrollByOneCard(1); };
+  }
+  if (leftArrow) {
+    leftArrow.onclick = function() { scrollByOneCard(-1); };
+  }
+});

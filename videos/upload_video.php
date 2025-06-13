@@ -21,7 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isset($_FILES['video']) && $_FILES['video']['error'] === 0) {
         $videoTmpPath = $_FILES['video']['tmp_name'];
-        $videoName = time() . '_' . basename($_FILES['video']['name']);
+        // USE THE ORIGINAL FILE NAME ONLY
+        $videoName = basename($_FILES['video']['name']);
         $videoPath = $uploadDir . $videoName;
 
         if (move_uploaded_file($videoTmpPath, $videoPath)) {
